@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VirasaAI — AI-Powered Indian Heritage Discovery</title>
+  <meta name="description" content="Point your camera at an Indian heritage site and let AI reveal its rich cultural story. Explore India's monuments, temples, forts, cuisine, art forms, and traditions through an immersive interactive experience." />
+  <meta name="keywords" content="Indian heritage, cultural heritage, AI recognition, monuments, temples, forts, India, UNESCO, heritage sites, culture, traditions" />
+  <meta property="og:title" content="VirasaAI — AI-Powered Indian Heritage Discovery" />
+  <meta property="og:description" content="Discover India's rich cultural heritage through AI-powered site recognition, interactive maps, timelines, and quizzes." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#1B0A3C" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Noto+Serif+Devanagari:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.17.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.1/dist/mobilenet.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="src/styles/variables.css" />
+  <link rel="stylesheet" href="src/styles/index.css" />
+</head>
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#hero" class="navbar-logo">
+        <span class="logo-icon">🏛️</span>
+        <span class="logo-text">Virasa<span class="logo-accent">AI</span></span>
+      </a>
+      <ul class="navbar-links" id="navbarLinks">
+        <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#scanner" class="nav-link" data-section="scanner">AI Scanner</a></li>
+        <li><a href="#map" class="nav-link" data-section="map">Explore Map</a></li>
+        <li><a href="#timeline" class="nav-link" data-section="timeline">Timeline</a></li>
+        <li><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
+        <li><a href="#quiz" class="nav-link" data-section="quiz">Quiz</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      </ul>
+      <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle navigation menu">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="mandala mandala-1"></div>
+      <div class="mandala mandala-2"></div>
+      <div class="mandala mandala-3"></div>
+      <div class="hero-particles" id="heroParticles"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-sanskrit">विरासत — Heritage</p>
+      <h1 class="hero-title">
+        Virasa<span class="hero-title-accent">AI</span>
+      </h1>
+      <p class="hero-tagline" id="heroTagline"></p>
+      <p class="hero-description">
+        Experience India's 5,000-year cultural legacy through AI-powered heritage recognition,
+        interactive maps, and immersive storytelling.
+      </p>
+      <div class="hero-cta">
+        <a href="#scanner" class="btn btn-primary">
+          <span class="btn-icon">📷</span> Scan a Heritage Site
+        </a>
+        <a href="#map" class="btn btn-secondary">
+          <span class="btn-icon">🗺️</span> Explore the Map
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="42">0</span>
+          <span class="stat-label">UNESCO Sites</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="28">0</span>
+          <span class="stat-label">States Covered</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="5000">0</span>
+          <span class="stat-label">Years of Heritage</span>
+        </div>
+      </div>
+    </div>
+    <a href="#scanner" class="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-arrow"></div>
+    </a>
+  </section>
+
+  <!-- ===== AI SCANNER SECTION ===== -->
+  <section class="section scanner-section" id="scanner">
+    <div class="section-header">
+      <p class="section-label">AI-Powered Recognition</p>
+      <h2 class="section-title">Scan a Heritage Site</h2>
+      <p class="section-subtitle">Point your camera at any Indian monument or upload a photo — our AI will identify it and reveal its rich cultural story.</p>
+    </div>
+    <div class="scanner-container">
+      <div class="scanner-viewfinder" id="scannerViewfinder">
+        <div class="viewfinder-frame">
+          <div class="corner corner-tl"></div>
+          <div class="corner corner-tr"></div>
+          <div class="corner corner-bl"></div>
+          <div class="corner corner-br"></div>
+        </div>
+        <video id="cameraFeed" autoplay playsinline></video>
+        <canvas id="captureCanvas" style="display:none;"></canvas>
+        <div class="scanner-overlay" id="scannerOverlay">
+          <div class="scan-line"></div>
+        </div>
+        <div class="scanner-placeholder" id="scannerPlaceholder">
+          <div class="placeholder-icon">📷</div>
+          <p>Tap to activate camera</p>
+          <p class="placeholder-hint">or upload a photo below</p>
+        </div>
+      </div>
+      <div class="scanner-controls">
+        <button class="btn btn-primary scanner-btn" id="btnStartCamera">
+          <span class="btn-icon">📹</span> Start Camera
+        </button>
+        <button class="btn btn-primary scanner-btn" id="btnCapture" style="display:none;">
+          <span class="btn-icon">📸</span> Capture
+        </button>
+        <label class="btn btn-secondary scanner-btn" for="imageUpload">
+          <span class="btn-icon">📤</span> Upload Photo
+        </label>
+        <input type="file" id="imageUpload" accept="image/*" style="display:none;" />
+        <button class="btn btn-accent scanner-btn" id="btnDemo">
+          <span class="btn-icon">✨</span> Try Demo
+        </button>
+      </div>
+      <!-- Processing indicator -->
+      <div class="scanner-processing" id="scannerProcessing" style="display:none;">
+        <div class="processing-mandala"></div>
+        <p class="processing-text">Analyzing heritage site...</p>
+      </div>
+      <!-- Result card -->
+      <div class="scanner-result" id="scannerResult" style="display:none;"></div>
+    </div>
+  </section>
+
+  <!-- ===== MAP EXPLORER SECTION ===== -->
+  <section class="section map-section" id="map">
+    <div class="section-header">
+      <p class="section-label">Interactive Explorer</p>
+      <h2 class="section-title">Discover India's Heritage Map</h2>
+      <p class="section-subtitle">Click on any state to explore its unique cultural heritage — dance, music, cuisine, textiles, and famous sites.</p>
+    </div>
+    <div class="map-container">
+      <div class="map-wrapper" id="mapWrapper">
+        <svg id="indiaMap" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg"></svg>
+        <div class="map-tooltip" id="mapTooltip" style="display:none;"></div>
+      </div>
+      <div class="map-panel" id="mapPanel">
+        <div class="panel-placeholder">
+          <div class="panel-placeholder-icon">👆</div>
+          <p>Click on a state to explore its cultural heritage</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE SECTION ===== -->
+  <section class="section timeline-section" id="timeline">
+    <div class="section-header">
+      <p class="section-label">Through the Ages</p>
+      <h2 class="section-title">India's Cultural Timeline</h2>
+      <p class="section-subtitle">A journey through 5,000 years of civilizations, empires, art, and traditions that shaped modern India.</p>
+    </div>
+    <div class="timeline-container" id="timelineContainer">
+      <div class="timeline-track" id="timelineTrack"></div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <section class="section gallery-section" id="gallery">
+    <div class="section-header">
+      <p class="section-label">Visual Showcase</p>
+      <h2 class="section-title">Heritage Gallery</h2>
+      <p class="section-subtitle">Explore India's architectural marvels, ancient temples, majestic forts, and living traditions.</p>
+    </div>
+    <div class="gallery-filters" id="galleryFilters">
+      <button class="filter-btn active" data-filter="all">All Sites</button>
+      <button class="filter-btn" data-filter="monument">Monuments</button>
+      <button class="filter-btn" data-filter="temple">Temples</button>
+      <button class="filter-btn" data-filter="fort">Forts & Palaces</button>
+      <button class="filter-btn" data-filter="cave">Caves</button>
+      <button class="filter-btn" data-filter="other">Others</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" style="display:none;">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+      <div class="lightbox-content" id="lightboxContent"></div>
+    </div>
+  </section>
+
+  <!-- ===== QUIZ SECTION ===== -->
+  <section class="section quiz-section" id="quiz">
+    <div class="section-header">
+      <p class="section-label">Test Your Knowledge</p>
+      <h2 class="section-title">Heritage Quiz</h2>
+      <p class="section-subtitle">How well do you know India's cultural heritage? Take the quiz and earn your heritage title!</p>
+    </div>
+    <div class="quiz-container" id="quizContainer">
+      <!-- Category Selection -->
+      <div class="quiz-categories" id="quizCategories">
+        <div class="quiz-cat-card" data-category="all">
+          <span class="cat-icon">🏛️</span>
+          <span class="cat-name">All Categories</span>
+          <span class="cat-count">50+ questions</span>
+        </div>
+        <div class="quiz-cat-card" data-category="architecture">
+          <span class="cat-icon">🕌</span>
+          <span class="cat-name">Architecture</span>
+          <span class="cat-count">12 questions</span>
+        </div>
+        <div class="quiz-cat-card" data-category="festivals">
+          <span class="cat-icon">🎆</span>
+          <span class="cat-name">Festivals</span>
+          <span class="cat-count">10 questions</span>
+        </div>
+        <div class="quiz-cat-card" data-category="cuisine">
+          <span class="cat-icon">🍛</span>
+          <span class="cat-name">Cuisine</span>
+          <span class="cat-count">10 questions</span>
+        </div>
+        <div class="quiz-cat-card" data-category="art">
+          <span class="cat-icon">🎭</span>
+          <span class="cat-name">Art & Dance</span>
+          <span class="cat-count">10 questions</span>
+        </div>
+        <div class="quiz-cat-card" data-category="history">
+          <span class="cat-icon">📜</span>
+          <span class="cat-name">History</span>
+          <span class="cat-count">10 questions</span>
+        </div>
+      </div>
+      <!-- Quiz Active Area -->
+      <div class="quiz-active" id="quizActive" style="display:none;">
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar" id="quizProgressBar"></div>
+          <span class="quiz-progress-text" id="quizProgressText">1 / 10</span>
+        </div>
+        <div class="quiz-score-bar">
+          <span class="quiz-score" id="quizScore">Score: 0</span>
+          <span class="quiz-streak" id="quizStreak"></span>
+        </div>
+        <div class="quiz-question-card" id="quizQuestionCard"></div>
+        <div class="quiz-options" id="quizOptions"></div>
+        <button class="btn btn-primary quiz-next" id="quizNext" style="display:none;">Next Question →</button>
+      </div>
+      <!-- Quiz Result -->
+      <div class="quiz-result" id="quizResult" style="display:none;"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section about-section" id="about">
+    <div class="section-header">
+      <p class="section-label">About the Project</p>
+      <h2 class="section-title">VirasaAI</h2>
+      <p class="section-subtitle">A student innovation project that blends AI and cultural preservation.</p>
+    </div>
+    <div class="about-container">
+      <div class="about-card about-mission">
+        <div class="about-icon">🎯</div>
+        <h3>Our Mission</h3>
+        <p>To make India's rich cultural heritage accessible and engaging through cutting-edge AI technology. We believe that understanding our heritage is the first step to preserving it for future generations.</p>
+      </div>
+      <div class="about-card about-how">
+        <div class="about-icon">🧠</div>
+        <h3>How It Works</h3>
+        <p>VirasaAI uses a TensorFlow.js-powered image recognition model trained on Indian heritage sites. Point your camera → AI identifies the site → Our curated database reveals its complete cultural story, including history, cuisine, art forms, and local artisan traditions.</p>
+      </div>
+      <div class="about-card about-tech">
+        <div class="about-icon">⚡</div>
+        <h3>Technology</h3>
+        <div class="tech-stack">
+          <span class="tech-tag">TensorFlow.js</span>
+          <span class="tech-tag">MobileNet</span>
+          <span class="tech-tag">HTML5 Canvas</span>
+          <span class="tech-tag">SVG Maps</span>
+          <span class="tech-tag">MediaDevices API</span>
+          <span class="tech-tag">Vanilla JavaScript</span>
+          <span class="tech-tag">CSS3 Animations</span>
+        </div>
+      </div>
+      <div class="about-card about-impact">
+        <div class="about-icon">🌏</div>
+        <h3>Impact</h3>
+        <p>By digitally documenting and showcasing heritage sites with AI, VirasaAI contributes to cultural preservation, promotes heritage tourism, and educates the next generation about India's incredible diversity.</p>
+      </div>
+    </div>
+    <div class="about-footer">
+      <p class="about-tagline">विरासत — विरासत बचाओ, संस्कृति अपनाओ</p>
+      <p class="about-translation">"Save the Heritage, Embrace the Culture"</p>
+      <p class="about-credits">A Student Innovation Project • 2026</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 VirasaAI — Showcasing India's Rich Cultural Heritage & Traditions</p>
+      <p class="footer-tagline">Built with ❤️ for India</p>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script type="module" src="src/data/heritageSites.js"></script>
+  <script type="module" src="src/data/indianStates.js"></script>
+  <script type="module" src="src/data/quizQuestions.js"></script>
+  <script type="module" src="src/data/timeline.js"></script>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
