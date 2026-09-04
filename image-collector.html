@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VirasaAI — Image Collector for Training</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Outfit', sans-serif; background: #0F0522; color: #fff; padding: 30px; }
+    h1 { color: #FF6B35; margin-bottom: 5px; font-size: 1.8rem; }
+    .subtitle { color: #999; margin-bottom: 30px; }
+    .sites-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+    .site-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 20px;
+      transition: all 0.3s;
+    }
+    .site-card:hover { border-color: #FF6B35; }
+    .site-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+    .site-hindi { color: #D4A853; font-size: 0.85rem; margin-bottom: 8px; }
+    .site-location { color: #888; font-size: 0.8rem; margin-bottom: 12px; }
+    .search-links { display: flex; flex-wrap: wrap; gap: 6px; }
+    .search-link {
+      display: inline-block;
+      padding: 6px 12px;
+      background: rgba(255,107,53,0.15);
+      color: #FF8F5E;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .search-link:hover { background: rgba(255,107,53,0.3); }
+    .instructions {
+      background: rgba(212,168,83,0.08);
+      border-left: 3px solid #D4A853;
+      padding: 20px;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 30px;
+      line-height: 1.8;
+    }
+    .instructions h3 { color: #D4A853; margin-bottom: 10px; }
+    .instructions ol { padding-left: 20px; }
+    .instructions li { margin-bottom: 6px; color: rgba(255,255,255,0.7); }
+    .step-badge {
+      display: inline-block;
+      background: #FF6B35;
+      color: #fff;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-right: 6px;
+    }
+    .tip { color: #00C853; font-size: 0.85rem; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🖼️ Image Collector — Training Data for VirasaAI</h1>
+  <p class="subtitle">Click the search links below to find and download training images for each heritage site</p>
+
+  <div class="instructions">
+    <h3>📋 How to Collect Images</h3>
+    <ol>
+      <li><span class="step-badge">Step 1</span> Click a search link below for any heritage site</li>
+      <li><span class="step-badge">Step 2</span> On Google Images, right-click → "Save Image As" to download (or use a bulk downloader extension)</li>
+      <li><span class="step-badge">Step 3</span> Save 50-100 images per site into separate folders (e.g., <code>taj-mahal/</code>, <code>red-fort/</code>)</li>
+      <li><span class="step-badge">Step 4</span> Include different angles, lighting, distances, and weather conditions</li>
+      <li><span class="step-badge">Step 5</span> Go to <a href="https://teachablemachine.withgoogle.com/train/image" target="_blank" style="color:#FF6B35;">Teachable Machine</a> and upload each folder as a class</li>
+    </ol>
+    <p class="tip">💡 Tip: Use the Chrome extension "Download All Images" to bulk-download from Google Images pages</p>
+  </div>
+
+  <div class="sites-grid" id="sitesGrid"></div>
+
+  <script>
+    const sites = [
+      { id: "taj-mahal", name: "Taj Mahal", hindi: "ताज महल", loc: "Agra, UP", keywords: ["Taj Mahal Agra", "Taj Mahal different angles", "Taj Mahal sunrise sunset", "Taj Mahal close up architecture"] },
+      { id: "red-fort", name: "Red Fort", hindi: "लाल किला", loc: "Delhi", keywords: ["Red Fort Delhi", "Lal Qila Delhi", "Red Fort architecture", "Red Fort aerial view"] },
+      { id: "qutb-minar", name: "Qutb Minar", hindi: "कुतुब मीनार", loc: "Delhi", keywords: ["Qutb Minar Delhi", "Qutub Minar tower", "Qutb Minar close up", "Qutb complex Iron Pillar"] },
+      { id: "hawa-mahal", name: "Hawa Mahal", hindi: "हवा महल", loc: "Jaipur", keywords: ["Hawa Mahal Jaipur", "Palace of Winds Jaipur", "Hawa Mahal facade", "Hawa Mahal windows close up"] },
+      { id: "amber-fort", name: "Amber Fort", hindi: "आमेर किला", loc: "Jaipur", keywords: ["Amber Fort Jaipur", "Amer Fort architecture", "Amber Fort Sheesh Mahal", "Amber Fort aerial"] },
+      { id: "khajuraho", name: "Khajuraho Temples", hindi: "खजुराहो मंदिर", loc: "MP", keywords: ["Khajuraho temples", "Khajuraho sculptures", "Kandariya Mahadeva temple", "Khajuraho architecture"] },
+      { id: "konark-sun-temple", name: "Konark Sun Temple", hindi: "कोणार्क सूर्य मंदिर", loc: "Odisha", keywords: ["Konark Sun Temple", "Konark temple wheels", "Konark chariot temple", "Sun Temple Odisha"] },
+      { id: "hampi", name: "Hampi", hindi: "हम्पी", loc: "Karnataka", keywords: ["Hampi ruins", "Hampi stone chariot", "Vittala Temple Hampi", "Hampi Vijayanagara"] },
+      { id: "ajanta-caves", name: "Ajanta Caves", hindi: "अजंता गुफाएँ", loc: "Maharashtra", keywords: ["Ajanta Caves", "Ajanta cave paintings", "Ajanta Buddhist caves", "Ajanta caves exterior"] },
+      { id: "ellora-caves", name: "Ellora Caves", hindi: "एलोरा गुफाएँ", loc: "Maharashtra", keywords: ["Ellora Caves", "Kailasa Temple Ellora", "Ellora cave 16", "Ellora rock cut temple"] },
+      { id: "meenakshi-temple", name: "Meenakshi Temple", hindi: "मीनाक्षी अम्मन मंदिर", loc: "Madurai, TN", keywords: ["Meenakshi Temple Madurai", "Meenakshi Amman gopuram", "Madurai temple towers", "Meenakshi temple colorful"] },
+      { id: "golden-temple", name: "Golden Temple", hindi: "स्वर्ण मंदिर", loc: "Amritsar", keywords: ["Golden Temple Amritsar", "Harmandir Sahib", "Golden Temple night", "Golden Temple reflection"] },
+      { id: "mysore-palace", name: "Mysore Palace", hindi: "मैसूर पैलेस", loc: "Mysuru, KA", keywords: ["Mysore Palace", "Mysore Palace illuminated", "Mysore Palace Dasara lights", "Mysore Palace interior"] },
+      { id: "sanchi-stupa", name: "Sanchi Stupa", hindi: "सांची स्तूप", loc: "MP", keywords: ["Sanchi Stupa", "Great Stupa Sanchi", "Sanchi gateway torana", "Sanchi Buddhist monument"] },
+      { id: "rani-ki-vav", name: "Rani ki Vav", hindi: "रानी की वाव", loc: "Patan, Gujarat", keywords: ["Rani ki Vav stepwell", "Rani ki Vav Patan", "Rani ki Vav sculptures", "Rani ki Vav aerial view"] },
+      { id: "charminar", name: "Charminar", hindi: "चारमीनार", loc: "Hyderabad", keywords: ["Charminar Hyderabad", "Charminar monument", "Charminar night view", "Charminar architecture"] },
+      { id: "victoria-memorial", name: "Victoria Memorial", hindi: "विक्टोरिया मेमोरियल", loc: "Kolkata", keywords: ["Victoria Memorial Kolkata", "Victoria Memorial white marble", "Victoria Memorial garden", "Victoria Memorial architecture"] },
+      { id: "brihadeshwara-temple", name: "Brihadeshwara Temple", hindi: "बृहदेश्वर मंदिर", loc: "Thanjavur, TN", keywords: ["Brihadeshwara Temple Thanjavur", "Big Temple Tanjore", "Brihadeshwara vimana tower", "Chola temple Thanjavur"] },
+      { id: "mahabalipuram", name: "Mahabalipuram", hindi: "महाबलीपुरम", loc: "TN", keywords: ["Mahabalipuram shore temple", "Arjuna Penance Mahabalipuram", "Five Rathas Mahabalipuram", "Mahabalipuram rock cut"] },
+      { id: "gateway-of-india", name: "Gateway of India", hindi: "गेटवे ऑफ इंडिया", loc: "Mumbai", keywords: ["Gateway of India Mumbai", "Gateway of India arch", "Gateway of India sea view", "Gateway of India night"] }
+    ];
+
+    const grid = document.getElementById('sitesGrid');
+    sites.forEach((site, i) => {
+      const links = site.keywords.map(kw =>
+        `<a class="search-link" href="https://www.google.com/search?tbm=isch&q=${encodeURIComponent(kw)}" target="_blank">🔍 ${kw}</a>`
+      ).join('');
+
+      grid.innerHTML += `
+        <div class="site-card">
+          <div class="site-name">${i+1}. ${site.name}</div>
+          <div class="site-hindi">${site.hindi}</div>
+          <div class="site-location">📍 ${site.loc} · Class: <code>${site.id}</code></div>
+          <div class="search-links">${links}</div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

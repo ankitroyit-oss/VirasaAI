@@ -12,6 +12,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
 }
@@ -220,6 +221,7 @@ input { font-family: inherit; }
   position: absolute;
   inset: 0;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .mandala {
@@ -227,6 +229,7 @@ input { font-family: inherit; }
   border-radius: 50%;
   border: 1px solid rgba(212,168,83,0.08);
   animation: mandala-spin 60s linear infinite;
+  pointer-events: none;
 }
 
 .mandala::before {
@@ -302,6 +305,7 @@ input { font-family: inherit; }
   text-align: center;
   max-width: 800px;
   padding: var(--space-6);
+  padding-top: 100px;
 }
 
 .hero-sanskrit {
@@ -421,8 +425,11 @@ input { font-family: inherit; }
    =========================== */
 .section {
   padding: var(--space-24) var(--space-6);
+  padding-top: calc(var(--space-24) + 20px);
   max-width: 1280px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .section-header {
@@ -715,6 +722,7 @@ input { font-family: inherit; }
   border: 1px solid rgba(255,255,255,0.06);
   padding: var(--space-4);
   aspect-ratio: 1;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -757,6 +765,9 @@ input { font-family: inherit; }
   z-index: var(--z-tooltip);
   white-space: nowrap;
   box-shadow: var(--shadow-lg);
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tooltip-name {
@@ -895,6 +906,8 @@ input { font-family: inherit; }
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--radius-2xl);
   padding: var(--space-6);
+  padding-top: calc(var(--space-6) + 12px);
+  margin-top: 20px;
   position: relative;
   transition: transform var(--transition-base), box-shadow var(--transition-base);
   cursor: default;
@@ -1504,7 +1517,7 @@ input { font-family: inherit; }
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--transition-base);
-    z-index: 5;
+    z-index: var(--z-navbar);
   }
 
   .navbar-links.open {

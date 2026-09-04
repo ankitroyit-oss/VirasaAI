@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VirasaAI — Workflow Diagrams</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      padding: 40px 20px;
+    }
+    .page-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #FF6B35;
+    }
+    .page-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 50px;
+      font-size: 1.1rem;
+    }
+    .diagram-section {
+      max-width: 950px;
+      margin: 0 auto 50px;
+      border: 2px solid #e0e0e0;
+      border-radius: 16px;
+      padding: 30px;
+      background: #fafafa;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .diagram-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #8B4513;
+      margin-bottom: 6px;
+    }
+    .diagram-desc {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 24px;
+    }
+    .mermaid-wrapper {
+      background: #ffffff;
+      border-radius: 10px;
+      border: 1px solid #eee;
+      padding: 20px 10px;
+      overflow: visible;
+      text-align: center;
+    }
+    .mermaid { text-align: center; }
+    .mermaid svg { max-width: 100% !important; height: auto !important; }
+    .print-btn {
+      display: block;
+      margin: 0 auto 40px;
+      padding: 14px 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #FF6B35, #D4A853);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+      transition: all 0.3s;
+    }
+    .print-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,107,53,0.4); }
+    .print-btn:disabled { opacity: 0.5; cursor: wait; }
+    .status-msg {
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      display: none;
+    }
+    .footer {
+      text-align: center;
+      color: #999;
+      font-size: 0.85rem;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+    }
+    @media print {
+      body { padding: 10px; }
+      .print-btn, .status-msg { display: none !important; }
+      .diagram-section {
+        border: 1px solid #ccc;
+        box-shadow: none;
+        margin-bottom: 30px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .mermaid-wrapper { border: none; }
+      .page-title { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="page-title">VirasaAI — Workflow Diagrams</h1>
+  <p class="page-subtitle">AI-Powered Indian Heritage Discovery Platform · Complete System Documentation</p>
+  <p class="status-msg" id="statusMsg">⏳ Rendering all diagrams, please wait...</p>
+  <button class="print-btn" id="printBtn" onclick="printDiagrams()">📄 Save as PDF / Print</button>
+
+  <!-- Diagram 1 -->
+  <div class="diagram-section">
+    <h2 class="diagram-title">1. System Architecture Overview</h2>
+    <p class="diagram-desc">Complete system layers — User → Frontend → AI Engine → Data → Feature Modules</p>
+    <div class="mermaid-wrapper"><pre class="mermaid">
+graph TB
+    subgraph USER["User Layer"]
+        A["Mobile / Desktop Browser"]
+    end
+    subgraph FRONTEND["Frontend Layer - Vercel"]
+        B["index.html - Single Page App"]
+        C["CSS Design System"]
+        D["app.js - Main Controller"]
+    end
+    subgraph AI["AI Layer - Browser-Side"]
+        E["TensorFlow.js Runtime"]
+        F["MobileNet CNN Model"]
+        G["Image Preprocessor"]
+    end
+    subgraph DATA["Data Layer - Client-Side"]
+        H["heritageSites.js - 20 Sites"]
+        I["indianStates.js - 29 States"]
+        J["quizQuestions.js - 52 Qs"]
+        K["timeline.js - 9 Eras"]
+    end
+    subgraph FEATURES["Feature Modules"]
+        L["AI Scanner"]
+        M["Map Explorer"]
+        N["Timeline"]
+        O["Gallery"]
+        P["Quiz Engine"]
+    end
+    A -->|HTTPS| B
+    B --> C
+    B --> D
+    D --> L & M & N & O & P
+    L --> E --> F
+    L --> G
+    F -->|Site ID| H
+    M --> I
+    M --> H
+    P --> J
+    N --> K
+    O --> H
+    </pre></div>
+  </div>
+
+  <!-- Diagram 2 -->
+  <div class="diagram-section">
+    <h2 class="diagram-title">2. AI Heritage Recognition — Complete Flow</h2>
+    <p class="diagram-desc">End-to-end flow from camera input to cultural data display</p>
+    <div class="mermaid-wrapper"><pre class="mermaid">
+flowchart TD
+    START(["User Opens AI Scanner"]) --> CHOICE{"Choose Input Method"}
+    CHOICE -->|Camera| CAM["Request Camera Permission"]
+    CHOICE -->|Upload| UPLOAD["Select Photo from Gallery"]
+    CHOICE -->|Demo| DEMO["Load Demo Mode"]
+    CAM --> PERMIT{"Permission Granted?"}
+    PERMIT -->|Yes| STREAM["Start Video Stream"]
+    PERMIT -->|No| FALLBACK["Show Error - Suggest Upload"]
+    FALLBACK --> UPLOAD
+    STREAM --> CAPTURE["Capture Frame to Canvas"]
+    UPLOAD --> CANVAS["Draw Image to Canvas"]
+    DEMO --> SKIP["Use Pre-selected Site"]
+    CAPTURE --> PREPROCESS["Preprocess Image 224x224"]
+    CANVAS --> PREPROCESS
+    PREPROCESS --> TFJS["TensorFlow.js Inference"]
+    TFJS --> MATCH["Match to Heritage DB"]
+    MATCH --> RESULT["Site Identified"]
+    SKIP --> RESULT
+    RESULT --> CARD["Display Result Card"]
+    CARD --> TABS{"Explore Tabs"}
+    TABS --> T1["History"]
+    TABS --> T2["Cuisine"]
+    TABS --> T3["Art and Craft"]
+    TABS --> T4["Stories"]
+    TABS --> T5["Fun Facts"]
+    </pre></div>
+  </div>
+
+  <!-- Diagram 3 -->
+  <div class="diagram-section">
+    <h2 class="diagram-title">3. Interactive Map — Data Flow</h2>
+    <p class="diagram-desc">How user interactions with the SVG map trigger data display</p>
+    <div class="mermaid-wrapper"><pre class="mermaid">
+flowchart LR
+    subgraph MAP["SVG India Map"]
+        S1["29 State Paths"]
+        M1["20 Site Markers"]
+    end
+    subgraph INTERACT["User Interactions"]
+        HOVER["Hover State"]
+        CLICK_S["Click State"]
+        CLICK_M["Click Marker"]
+    end
+    subgraph OUTPUT["Display Output"]
+        TOOLTIP["Tooltip: Name + Dance + Food"]
+        PANEL["Side Panel: Full Cultural Profile"]
+        LIGHTBOX["Lightbox: Complete Site Detail"]
+    end
+    S1 --> HOVER --> TOOLTIP
+    S1 --> CLICK_S --> PANEL
+    M1 --> CLICK_M --> LIGHTBOX
+    PANEL --> SITELINKS["Heritage Site Links"]
+    SITELINKS --> LIGHTBOX
+    </pre></div>
+  </div>
+
+  <!-- Diagram 4 -->
+  <div class="diagram-section">
+    <h2 class="diagram-title">4. Quiz Engine — Game Flow</h2>
+    <p class="diagram-desc">Category selection → scoring → heritage title awarding</p>
+    <div class="mermaid-wrapper"><pre class="mermaid">
+flowchart TD
+    Q_START(["Quiz Section"]) --> CAT{"Select Category"}
+    CAT -->|All| P1["52 Questions"]
+    CAT -->|Architecture| P2["12 Questions"]
+    CAT -->|Festivals| P3["10 Questions"]
+    CAT -->|Cuisine| P4["10 Questions"]
+    CAT -->|Art| P5["10 Questions"]
+    CAT -->|History| P6["10 Questions"]
+    P1 & P2 & P3 & P4 & P5 & P6 --> SHUFFLE["Shuffle and Pick 10"]
+    SHUFFLE --> SHOW["Show Question + 4 Options"]
+    SHOW --> ANS{"User Answers"}
+    ANS -->|Correct| RIGHT["Green Pulse + Score +10 + Streak +1"]
+    ANS -->|Wrong| WRONG["Red Shake + Streak Reset"]
+    RIGHT & WRONG --> EXPLAIN["Show Explanation"]
+    EXPLAIN --> MORE{"More Questions?"}
+    MORE -->|Yes| SHOW
+    MORE -->|No| CALC["Calculate Final Score"]
+    CALC --> TITLE{"Heritage Title"}
+    TITLE -->|90 percent plus| T1["Heritage Scholar"]
+    TITLE -->|70-89 percent| T2["Culture Keeper"]
+    TITLE -->|50-69 percent| T3["Heritage Explorer"]
+    TITLE -->|Under 50 percent| T4["Curious Traveler"]
+    T1 & T2 --> CONFETTI["Confetti Animation"]
+    T3 & T4 --> RESULT["Result Screen"]
+    CONFETTI --> RESULT
+    </pre></div>
+  </div>
+
+  <!-- Diagram 5 -->
+  <div class="diagram-section">
+    <h2 class="diagram-title">5. Data Architecture — Entity Relationships</h2>
+    <p class="diagram-desc">How heritage sites, states, quiz questions, and timeline eras relate</p>
+    <div class="mermaid-wrapper"><pre class="mermaid">
+erDiagram
+    HERITAGE_SITE {
+        string id PK
+        string name
+        string nameHindi
+        string category
+        string period
+        boolean unesco
+    }
+    INDIAN_STATE {
+        string id PK
+        string name
+        string capital
+        string danceForm
+        string cuisine
+    }
+    QUIZ_QUESTION {
+        int id PK
+        string category
+        string question
+        int correct
+    }
+    TIMELINE_ERA {
+        string id PK
+        string era
+        string period
+    }
+    CUISINE {
+        string name
+        string description
+    }
+    ARTISAN {
+        string craft
+        string description
+    }
+    HERITAGE_SITE ||--o{ CUISINE : "has local"
+    HERITAGE_SITE ||--o{ ARTISAN : "has traditional"
+    INDIAN_STATE ||--o{ HERITAGE_SITE : "contains"
+    TIMELINE_ERA ||--o{ HERITAGE_SITE : "built during"
+    QUIZ_QUESTION }o--|| HERITAGE_SITE : "references"
+    </pre></div>
+  </div>
+
+  <!-- Diagram 6 -->
+  <div class="diagram-section">
+    <h2 class="diagram-title">6. Deployment Pipeline</h2>
+    <p class="diagram-desc">From code to live site — automatic CI/CD via GitHub + Vercel</p>
+    <div class="mermaid-wrapper"><pre class="mermaid">
+flowchart LR
+    DEV["Developer"] -->|git push| GH["GitHub Repository"]
+    GH -->|Webhook| VERCEL["Vercel Build and Deploy"]
+    VERCEL -->|CDN| LIVE["virasa-ai.vercel.app"]
+    LIVE -->|HTTPS| USERS["Users Worldwide"]
+    LIVE -->|Loads| CDN1["TensorFlow.js CDN"]
+    LIVE -->|Loads| CDN2["Google Fonts CDN"]
+    </pre></div>
+  </div>
+
+  <!-- Diagram 7 -->
+  <div class="diagram-section">
+    <h2 class="diagram-title">7. AI + Database — Sequence Diagram</h2>
+    <p class="diagram-desc">Step-by-step sequence of how AI identification triggers cultural data retrieval</p>
+    <div class="mermaid-wrapper"><pre class="mermaid">
+sequenceDiagram
+    actor User
+    participant Camera
+    participant Canvas
+    participant TF as TensorFlow.js
+    participant Model as MobileNet
+    participant DB as Heritage DB
+    participant UI as Result UI
+    User->>Camera: Point at heritage site
+    Camera->>Canvas: Capture frame
+    Canvas->>TF: Send preprocessed image
+    TF->>Model: Run classification
+    Model-->>TF: Predictions + Confidence
+    TF->>DB: Match Site ID
+    DB-->>UI: Full cultural data
+    Note over UI: History, Architecture, Cuisine, Art, Stories, Fun Facts
+    UI-->>User: Display result card with tabs
+    </pre></div>
+  </div>
+
+  <!-- Diagram 8 -->
+  <div class="diagram-section">
+    <h2 class="diagram-title">8. User Experience — Navigation Flow</h2>
+    <p class="diagram-desc">Complete navigation path through all sections of the app</p>
+    <div class="mermaid-wrapper"><pre class="mermaid">
+flowchart TD
+    LAND["Landing Page"] --> HERO["Hero Section with Animated Stats"]
+    HERO --> CTA1["Scan a Heritage Site"]
+    HERO --> CTA2["Explore the Map"]
+    CTA1 --> SCANNER["AI Scanner Section"]
+    SCANNER --> CAMERA["Use Camera"]
+    SCANNER --> UPLOAD["Upload Photo"]
+    SCANNER --> DEMO["Try Demo"]
+    CAMERA & UPLOAD & DEMO --> RESULT["Heritage Site Result Card"]
+    RESULT --> TABS["Explore: History - Cuisine - Art - Stories - Facts"]
+    CTA2 --> MAP["Interactive India Map"]
+    MAP --> STATE["Click State: Cultural Profile"]
+    MAP --> MARKER["Click Site Marker: Detail Lightbox"]
+    HERO -->|Scroll| TIMELINE["Cultural Timeline"]
+    TIMELINE --> ERA["9 Eras: Indus Valley to Modern"]
+    TIMELINE -->|Scroll| GALLERY["Heritage Gallery"]
+    GALLERY --> FILTER["Filter: Monuments - Temples - Forts - Caves"]
+    FILTER --> CARD["Click Card: Full Detail Lightbox"]
+    GALLERY -->|Scroll| QUIZ["Heritage Quiz"]
+    QUIZ --> PLAY["Answer 10 Questions"]
+    PLAY --> SCORE["Get Score + Heritage Title"]
+    QUIZ -->|Scroll| ABOUT["About VirasaAI"]
+    </pre></div>
+  </div>
+
+  <div class="footer">
+    <p><strong>VirasaAI</strong> — AI-Powered Indian Heritage Discovery Platform</p>
+    <p>GitHub: github.com/ankitroyit-oss/VirasaAI · Live: virasa-ai.vercel.app</p>
+    <p>Student Innovation Project · 2026</p>
+  </div>
+
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'default',
+      flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' },
+      sequence: { useMaxWidth: true },
+      er: { useMaxWidth: true }
+    });
+
+    function printDiagrams() {
+      const btn = document.getElementById('printBtn');
+      const msg = document.getElementById('statusMsg');
+
+      btn.disabled = true;
+      btn.textContent = '⏳ Rendering diagrams...';
+      msg.style.display = 'block';
+
+      // Wait for all Mermaid SVGs to be fully rendered
+      setTimeout(() => {
+        const diagrams = document.querySelectorAll('.mermaid');
+        let allRendered = true;
+
+        diagrams.forEach(d => {
+          if (!d.querySelector('svg')) {
+            allRendered = false;
+          }
+        });
+
+        if (allRendered) {
+          msg.style.display = 'none';
+          btn.textContent = '📄 Save as PDF / Print';
+          btn.disabled = false;
+          window.print();
+        } else {
+          // Try again after more time
+          setTimeout(() => {
+            msg.style.display = 'none';
+            btn.textContent = '📄 Save as PDF / Print';
+            btn.disabled = false;
+            window.print();
+          }, 3000);
+        }
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
