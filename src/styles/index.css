@@ -1313,7 +1313,10 @@ body { top: 0px !important; position: relative !important; }
   color: rgba(255,255,255,0.7);
   margin-bottom: var(--space-4);
   line-height: 1.5;
-  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .shop-card-footer {
@@ -1322,6 +1325,7 @@ body { top: 0px !important; position: relative !important; }
   justify-content: space-between;
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: var(--space-3);
+  margin-top: auto;
 }
 
 .shop-price {
