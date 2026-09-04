@@ -1158,6 +1158,130 @@ input { font-family: inherit; }
 }
 
 /* ===========================
+   SHOP
+   =========================== */
+.shop-section { background: transparent; }
+
+.shop-filters {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-8);
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-5);
+}
+
+.shop-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--saffron);
+}
+
+.shop-card-visual {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  background: rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.shop-card-badge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  background: rgba(212,168,83,0.9);
+  color: var(--indigo-dark);
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.shop-card-body {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.shop-card-name {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.shop-card-hindi {
+  font-size: var(--text-sm);
+  color: var(--royal-gold);
+  font-family: var(--font-accent);
+  margin-bottom: var(--space-2);
+}
+
+.shop-card-region {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.5);
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.shop-card-desc {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.7);
+  margin-bottom: var(--space-4);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.shop-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: var(--space-3);
+}
+
+.shop-price {
+  font-weight: 600;
+  color: var(--warm-white);
+}
+
+.btn-shop {
+  padding: 8px 16px;
+  background: var(--saffron);
+  color: white;
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--transition-fast);
+}
+
+.btn-shop:hover {
+  background: var(--saffron-light);
+}
+
+/* ===========================
    QUIZ
    =========================== */
 .quiz-section { background: transparent; }

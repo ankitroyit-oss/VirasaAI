@@ -1,0 +1,453 @@
+/* =============================================
+   VirasaAI — GI-Tagged Products Database
+   Curated handicrafts & artisan products by region
+   ============================================= */
+
+export const giProducts = [
+  // ===== UTTAR PRADESH =====
+  {
+    id: "agra-marble-inlay",
+    name: "Agra Marble Inlay (Pietra Dura)",
+    nameHindi: "आगरा संगमरमर जड़ाई",
+    category: "handicraft",
+    region: "Agra, Uttar Pradesh",
+    stateId: "uttar-pradesh",
+    siteIds: ["taj-mahal"],
+    giTag: true,
+    price: "₹1,500 – ₹25,000",
+    description: "Semi-precious stones inlaid into white marble, a 400-year-old Mughal craft still practiced by Agra artisan families. Tabletops, coasters, jewelry boxes.",
+    artisanStory: "The descendants of artisans who built the Taj Mahal continue this craft today in the narrow lanes of Agra, using the same techniques passed down for 16 generations.",
+    buyLink: "https://www.gitagged.com/online-store/handicraft/",
+    emoji: "💎",
+    image: "marble-inlay"
+  },
+  {
+    id: "lucknow-chikankari",
+    name: "Lucknow Chikankari Embroidery",
+    nameHindi: "लखनऊ चिकनकारी",
+    category: "handloom",
+    region: "Lucknow, Uttar Pradesh",
+    stateId: "uttar-pradesh",
+    siteIds: [],
+    giTag: true,
+    price: "₹800 – ₹15,000",
+    description: "Delicate hand embroidery on muslin, chiffon, and cotton. Features 36 types of stitches creating floral and paisley patterns.",
+    artisanStory: "Over 2.5 lakh artisans, mostly women, depend on Chikankari for their livelihood. The craft was patronized by Mughal empress Noor Jahan.",
+    buyLink: "https://www.gitagged.com/online-store/handloom/",
+    emoji: "🧵",
+    image: "chikankari"
+  },
+  {
+    id: "varanasi-banarasi-silk",
+    name: "Banarasi Silk Saree",
+    nameHindi: "बनारसी रेशमी साड़ी",
+    category: "handloom",
+    region: "Varanasi, Uttar Pradesh",
+    stateId: "uttar-pradesh",
+    siteIds: [],
+    giTag: true,
+    price: "₹5,000 – ₹1,00,000+",
+    description: "Gold and silver brocade silk sarees with intricate zari work. Each saree takes 15 days to 6 months to weave by hand.",
+    artisanStory: "Banarasi weaving dates back 500+ years. The weavers of Varanasi use traditional pit looms and hand-twisted gold threads to create these masterpieces.",
+    buyLink: "https://www.gitagged.com/online-store/handloom/",
+    emoji: "👗",
+    image: "banarasi-silk"
+  },
+
+  // ===== RAJASTHAN =====
+  {
+    id: "jaipur-blue-pottery",
+    name: "Jaipur Blue Pottery",
+    nameHindi: "जयपुर ब्लू पॉटरी",
+    category: "handicraft",
+    region: "Jaipur, Rajasthan",
+    stateId: "rajasthan",
+    siteIds: ["hawa-mahal", "amber-fort"],
+    giTag: true,
+    price: "₹300 – ₹8,000",
+    description: "Vibrant blue-glazed pottery made without clay — using quartz, glass, and Multani Mitti. Plates, vases, tiles with Persian-inspired designs.",
+    artisanStory: "Brought to India via Persia and Central Asia, this craft nearly went extinct before being revived by Rajasthani artisans in the 20th century.",
+    buyLink: "https://www.gitagged.com/online-store/handicraft/",
+    emoji: "🏺",
+    image: "blue-pottery"
+  },
+  {
+    id: "rajasthan-bandhani",
+    name: "Rajasthani Bandhani (Tie-Dye)",
+    nameHindi: "राजस्थानी बंधनी",
+    category: "handloom",
+    region: "Jodhpur & Jaipur, Rajasthan",
+    stateId: "rajasthan",
+    siteIds: ["hawa-mahal"],
+    giTag: true,
+    price: "₹500 – ₹12,000",
+    description: "Traditional tie-and-dye technique creating intricate dot patterns. Dupattas, sarees, and turbans in vibrant colors.",
+    artisanStory: "The earliest evidence of Bandhani dates to the Indus Valley Civilization. Khatri community artisans in Rajasthan have preserved this 5,000-year-old art.",
+    buyLink: "https://www.gitagged.com/online-store/handloom/",
+    emoji: "🎨",
+    image: "bandhani"
+  },
+  {
+    id: "rajasthan-block-print",
+    name: "Sanganer Block Print Textiles",
+    nameHindi: "सांगानेर ब्लॉक प्रिंट",
+    category: "handloom",
+    region: "Sanganer, Rajasthan",
+    stateId: "rajasthan",
+    siteIds: [],
+    giTag: true,
+    price: "₹400 – ₹6,000",
+    description: "Hand-carved wooden blocks dipped in natural dyes and stamped onto cotton fabric. Floral motifs in earthy tones.",
+    artisanStory: "Sanganer's printing tradition is 500 years old. Artisans carve intricate teak wood blocks by hand and use vegetable-based dyes.",
+    buyLink: "https://www.gitagged.com/online-store/handloom/",
+    emoji: "🖨️",
+    image: "block-print"
+  },
+
+  // ===== WEST BENGAL =====
+  {
+    id: "purulia-chhau-mask",
+    name: "Purulia Chhau Dance Mask",
+    nameHindi: "पुरुलिया छऊ मुखौटा",
+    category: "handicraft",
+    region: "Purulia, West Bengal",
+    stateId: "west-bengal",
+    siteIds: [],
+    giTag: true,
+    price: "₹500 – ₹5,000",
+    description: "Vibrant papier-mâché masks depicting gods, demons, and animals from Hindu mythology. Used in the UNESCO-recognized Chhau dance tradition.",
+    artisanStory: "Sutradhar community artisans in Charida village (Purulia) have been crafting these masks for generations. The entire village's economy depends on this craft.",
+    buyLink: "https://www.gitagged.com/online-store/handicraft/",
+    emoji: "🎭",
+    image: "chhau-mask"
+  },
+  {
+    id: "shantiniketan-leather",
+    name: "Shantiniketan Leather Goods",
+    nameHindi: "शांतिनिकेतन चमड़ा",
+    category: "handicraft",
+    region: "Birbhum, West Bengal",
+    stateId: "west-bengal",
+    siteIds: [],
+    giTag: true,
+    price: "₹300 – ₹3,000",
+    description: "Hand-tooled and batik-printed leather bags, wallets, and accessories with distinctive folk motifs inspired by Rabindranath Tagore's art school.",
+    artisanStory: "Inspired by Japanese leather craft brought to Shantiniketan by Tagore, local artisans blended it with Indian folk art traditions.",
+    buyLink: "https://www.gitagged.com/online-store/handicraft/",
+    emoji: "👜",
+    image: "shantiniketan-leather"
+  },
+  {
+    id: "baluchari-saree",
+    name: "Baluchari Silk Saree",
+    nameHindi: "बालूचरी साड़ी",
+    category: "handloom",
+    region: "Bishnupur, West Bengal",
+    stateId: "west-bengal",
+    siteIds: [],
+    giTag: true,
+    price: "₹3,000 – ₹30,000",
+    description: "Silk sarees with elaborate pallu depicting mythological scenes from Ramayana and Mahabharata. Woven on jacquard looms.",
+    artisanStory: "Originating in Murshidabad under Nawab patronage, the craft shifted to Bishnupur. Weavers depict entire epic scenes in thread.",
+    buyLink: "https://www.gitagged.com/online-store/handloom/",
+    emoji: "👗",
+    image: "baluchari"
+  },
+
+  // ===== KARNATAKA =====
+  {
+    id: "mysore-silk-saree",
+    name: "Mysore Silk Saree",
+    nameHindi: "मैसूर रेशमी साड़ी",
+    category: "handloom",
+    region: "Mysuru, Karnataka",
+    stateId: "karnataka",
+    siteIds: ["mysore-palace"],
+    giTag: true,
+    price: "₹4,000 – ₹25,000",
+    description: "Pure mulberry silk sarees with gold zari, known for lightweight drape and lustrous finish. The silk comes from Karnataka's own sericulture farms.",
+    artisanStory: "Tipu Sultan established silk weaving in Mysore in the 18th century. Today, KSIC (Karnataka Silk Industries Corporation) certifies authentic Mysore silks.",
+    buyLink: "https://www.gitagged.com/online-store/handloom/",
+    emoji: "✨",
+    image: "mysore-silk"
+  },
+  {
+    id: "channapatna-toys",
+    name: "Channapatna Wooden Toys",
+    nameHindi: "चन्नपटना लकड़ी के खिलौने",
+    category: "handicraft",
+    region: "Channapatna, Karnataka",
+    stateId: "karnataka",
+    siteIds: ["mysore-palace"],
+    giTag: true,
+    price: "₹100 – ₹2,000",
+    description: "Colorful lacquered wooden toys made from Aale Mara (ivory wood) and painted with vegetable dyes. Known as 'Toy Town of India'.",
+    artisanStory: "This 200-year-old craft was introduced by Tipu Sultan who invited Persian artisans. Today 5,000+ artisans keep the tradition alive.",
+    buyLink: "https://www.gitagged.com/online-store/handicraft/",
+    emoji: "🪀",
+    image: "channapatna-toys"
+  },
+
+  // ===== TAMIL NADU =====
+  {
+    id: "thanjavur-painting",
+    name: "Thanjavur (Tanjore) Painting",
+    nameHindi: "तंजावुर पेंटिंग",
+    category: "painting",
+    region: "Thanjavur, Tamil Nadu",
+    stateId: "tamil-nadu",
+    siteIds: ["brihadeshwara-temple"],
+    giTag: true,
+    price: "₹2,000 – ₹50,000",
+    description: "Classical South Indian painting with gold foil overlay, semi-precious stones, and rich colors depicting Hindu gods and goddesses.",
+    artisanStory: "Patronized by the Chola and Nayak dynasties, these paintings use 22-karat gold leaf. A single painting can take 2-6 months to complete.",
+    buyLink: "https://www.gitagged.com/online-store/indian-paintings-traditional/",
+    emoji: "🖼️",
+    image: "tanjore-painting"
+  },
+  {
+    id: "kanchipuram-silk",
+    name: "Kanchipuram Silk Saree",
+    nameHindi: "कांचीपुरम रेशम साड़ी",
+    category: "handloom",
+    region: "Kanchipuram, Tamil Nadu",
+    stateId: "tamil-nadu",
+    siteIds: ["mahabalipuram"],
+    giTag: true,
+    price: "₹8,000 – ₹1,50,000+",
+    description: "India's most prestigious silk saree — heavy mulberry silk with pure gold zari borders. Distinct temple border designs and contrasting pallu.",
+    artisanStory: "Weavers of Kanchipuram trace their lineage to sage Markanda, the master weaver of the gods. Each saree uses 2 shuttles worked by 2 weavers.",
+    buyLink: "https://www.gitagged.com/online-store/handloom/",
+    emoji: "👗",
+    image: "kanchipuram-silk"
+  },
+
+  // ===== ODISHA =====
+  {
+    id: "pattachitra-painting",
+    name: "Odisha Pattachitra Painting",
+    nameHindi: "पट्टचित्र पेंटिंग",
+    category: "painting",
+    region: "Puri, Odisha",
+    stateId: "odisha",
+    siteIds: ["konark-sun-temple"],
+    giTag: true,
+    price: "₹500 – ₹20,000",
+    description: "Ancient scroll painting on treated cloth depicting Jagannath, Krishna Leela, and mythological narratives using natural dyes.",
+    artisanStory: "Chitrakars of Raghurajpur village near Puri have painted Pattachitras for over 1,000 years. Every home in the village is an artist's studio.",
+    buyLink: "https://www.gitagged.com/online-store/indian-paintings-traditional/",
+    emoji: "🎨",
+    image: "pattachitra"
+  },
+
+  // ===== MADHYA PRADESH =====
+  {
+    id: "chanderi-fabric",
+    name: "Chanderi Fabric",
+    nameHindi: "चंदेरी कपड़ा",
+    category: "handloom",
+    region: "Chanderi, Madhya Pradesh",
+    stateId: "madhya-pradesh",
+    siteIds: ["khajuraho", "sanchi-stupa"],
+    giTag: true,
+    price: "₹1,500 – ₹15,000",
+    description: "Sheer, lightweight fabric combining silk and cotton with gold zari. Known for its transparent texture and traditional coin and peacock motifs.",
+    artisanStory: "Chanderi weaving dates back to the Vedic period. Mughal records mention Chanderi fabric being gifted to royalty across Asia.",
+    buyLink: "https://www.gitagged.com/online-store/handloom/",
+    emoji: "🧶",
+    image: "chanderi"
+  },
+
+  // ===== GUJARAT =====
+  {
+    id: "patan-patola",
+    name: "Patan Patola Saree",
+    nameHindi: "पाटन पटोला",
+    category: "handloom",
+    region: "Patan, Gujarat",
+    stateId: "gujarat",
+    siteIds: ["rani-ki-vav"],
+    giTag: true,
+    price: "₹50,000 – ₹6,00,000+",
+    description: "One of India's rarest and most expensive textiles — double ikat silk saree where both warp and weft are tie-dyed before weaving.",
+    artisanStory: "Only 3 Salvi family looms in Patan still produce authentic Patola. A single saree takes 6-12 months to weave. The technique is a closely guarded family secret.",
+    buyLink: "https://www.gitagged.com/online-store/handloom/",
+    emoji: "💎",
+    image: "patola"
+  },
+
+  // ===== TELANGANA =====
+  {
+    id: "nirmal-painting",
+    name: "Nirmal Painting",
+    nameHindi: "निर्मल पेंटिंग",
+    category: "painting",
+    region: "Nirmal, Telangana",
+    stateId: "telangana",
+    siteIds: ["charminar"],
+    giTag: true,
+    price: "₹800 – ₹15,000",
+    description: "Paintings on softwood with gold leaf detailing, depicting mythological themes and nature scenes. Known for their warm color palette.",
+    artisanStory: "Nirmal paintings were patronized by the Nizam of Hyderabad. The craft uses poniki wood and natural pigments mixed with herbal gum.",
+    buyLink: "https://www.gitagged.com/online-store/indian-paintings-traditional/",
+    emoji: "🎨",
+    image: "nirmal"
+  },
+  {
+    id: "hyderabad-pearls",
+    name: "Hyderabad Pearls",
+    nameHindi: "हैदराबादी मोती",
+    category: "jewellery",
+    region: "Hyderabad, Telangana",
+    stateId: "telangana",
+    siteIds: ["charminar"],
+    giTag: true,
+    price: "₹500 – ₹50,000",
+    description: "Hyderabad is India's pearl capital. Traditional pearl stringing, grading, and jewelry making has been a specialty for 400+ years.",
+    artisanStory: "The Charminar area is the hub of pearl trading since the Qutb Shahi dynasty. Artisans drill, sort, and string pearls entirely by hand.",
+    buyLink: "https://www.gitagged.com/online-store/jewelry-stores/",
+    emoji: "📿",
+    image: "hyderabad-pearls"
+  },
+
+  // ===== MAHARASHTRA =====
+  {
+    id: "paithani-saree",
+    name: "Paithani Silk Saree",
+    nameHindi: "पैठणी साड़ी",
+    category: "handloom",
+    region: "Paithan, Maharashtra",
+    stateId: "maharashtra",
+    siteIds: ["ajanta-caves", "ellora-caves"],
+    giTag: true,
+    price: "₹15,000 – ₹3,00,000+",
+    description: "Handwoven silk saree with oblique square design (narali) border and peacock pallu. Pure gold thread interlaced with colored silk.",
+    artisanStory: "Mentioned in ancient texts dating to 200 BC, Paithani sarees were traded on the Silk Route. The weaving technique predates most Indian textile traditions.",
+    buyLink: "https://www.gitagged.com/online-store/handloom/",
+    emoji: "✨",
+    image: "paithani"
+  },
+  {
+    id: "kolhapuri-chappal",
+    name: "Kolhapuri Chappal (Leather Sandals)",
+    nameHindi: "कोल्हापुरी चप्पल",
+    category: "handicraft",
+    region: "Kolhapur, Maharashtra",
+    stateId: "maharashtra",
+    siteIds: [],
+    giTag: true,
+    price: "₹400 – ₹3,000",
+    description: "Hand-stitched leather sandals with no nails or adhesives. Made from vegetable-tanned buffalo leather. Famous globally for durability and comfort.",
+    artisanStory: "Dating back 800 years, these sandals were originally made by Cobbler communities in Kolhapur. Each pair is entirely handcrafted.",
+    buyLink: "https://www.gitagged.com/online-store/fashion-accessories/",
+    emoji: "👡",
+    image: "kolhapuri"
+  },
+
+  // ===== PUNJAB =====
+  {
+    id: "phulkari-embroidery",
+    name: "Punjab Phulkari Embroidery",
+    nameHindi: "पंजाब फुलकारी",
+    category: "handloom",
+    region: "Punjab",
+    stateId: "punjab",
+    siteIds: ["golden-temple"],
+    giTag: true,
+    price: "₹1,000 – ₹20,000",
+    description: "Vibrant embroidery meaning 'flower work' — geometric and floral patterns in bright floss silk on coarse cotton. Dupattas, shawls, and wall hangings.",
+    artisanStory: "Phulkari was traditionally made by women as a bridal gift. Each piece takes weeks of hand-stitching using darning stitch from the wrong side of the fabric.",
+    buyLink: "https://www.gitagged.com/online-store/handloom/",
+    emoji: "🌸",
+    image: "phulkari"
+  },
+
+  // ===== ANDHRA PRADESH =====
+  {
+    id: "kalamkari-art",
+    name: "Machilipatnam Kalamkari",
+    nameHindi: "कलमकारी",
+    category: "painting",
+    region: "Machilipatnam, Andhra Pradesh",
+    stateId: "andhra-pradesh",
+    siteIds: [],
+    giTag: true,
+    price: "₹300 – ₹10,000",
+    description: "Hand-painted or block-printed cotton textile using a kalam (pen) with natural dyes. Depicts mythological scenes in earthy tones.",
+    artisanStory: "A 3,000-year-old art form patronized by the Golconda Sultanate and later by European traders. Uses 23 steps to produce natural colors.",
+    buyLink: "https://www.gitagged.com/online-store/indian-paintings-traditional/",
+    emoji: "🖌️",
+    image: "kalamkari"
+  },
+
+  // ===== KERALA =====
+  {
+    id: "kasavu-mundu",
+    name: "Kerala Kasavu Mundu & Saree",
+    nameHindi: "केरल कसावु",
+    category: "handloom",
+    region: "Balaramapuram, Kerala",
+    stateId: "kerala",
+    siteIds: [],
+    giTag: true,
+    price: "₹1,000 – ₹10,000",
+    description: "Iconic cream/white cotton textile with gold zari border. Worn during Onam and other festivals. Handwoven on traditional pit looms.",
+    artisanStory: "The weavers of Balaramapuram have been weaving Kerala's signature fabric for over 200 years using fine cotton and real gold thread.",
+    buyLink: "https://www.gitagged.com/online-store/handloom/",
+    emoji: "🌿",
+    image: "kasavu"
+  },
+
+  // ===== KASHMIR =====
+  {
+    id: "kashmir-pashmina",
+    name: "Kashmir Pashmina Shawl",
+    nameHindi: "कश्मीरी पश्मीना",
+    category: "handloom",
+    region: "Srinagar, Kashmir",
+    stateId: "jammu-kashmir",
+    siteIds: [],
+    giTag: true,
+    price: "₹5,000 – ₹2,00,000+",
+    description: "Ultra-fine wool shawl from Changthangi goats of Ladakh. Hand-spun, hand-woven, and sometimes hand-embroidered with Kani weave patterns.",
+    artisanStory: "The art of Pashmina weaving was introduced by Mir Syed Ali Hamdani in the 14th century. A single shawl can take 2-3 years to complete with full Kani work.",
+    buyLink: "https://www.gitagged.com/online-store/handloom/",
+    emoji: "🧣",
+    image: "pashmina"
+  },
+  {
+    id: "kashmir-walnut-wood",
+    name: "Kashmir Walnut Wood Carving",
+    nameHindi: "कश्मीरी अखरोट की लकड़ी",
+    category: "handicraft",
+    region: "Srinagar, Kashmir",
+    stateId: "jammu-kashmir",
+    siteIds: [],
+    giTag: true,
+    price: "₹1,000 – ₹50,000",
+    description: "Intricately hand-carved walnut wood furniture, boxes, screens, and decorative items with chinar leaf and floral motifs.",
+    artisanStory: "Dating back to the 15th century, Kashmiri wood carving was influenced by Persian and Central Asian artisans who settled in the valley.",
+    buyLink: "https://www.gitagged.com/online-store/handicraft/",
+    emoji: "🪵",
+    image: "walnut-carving"
+  }
+];
+
+// ===== HELPER FUNCTIONS =====
+
+export function getProductsByState(stateId) {
+  return giProducts.filter(p => p.stateId === stateId);
+}
+
+export function getProductsBySite(siteId) {
+  return giProducts.filter(p => p.siteIds.includes(siteId));
+}
+
+export function getProductsByCategory(category) {
+  if (category === 'all') return giProducts;
+  return giProducts.filter(p => p.category === category);
+}
+
+export function findProductById(id) {
+  return giProducts.find(p => p.id === id);
+}

@@ -7,6 +7,7 @@ import { heritageSites, findSiteById, filterSitesByCategory } from './data/herit
 import { indianStates, findStateById } from './data/indianStates.js';
 import { getRandomQuestions } from './data/quizQuestions.js';
 import { timelineEras } from './data/timeline.js';
+import { giProducts, getProductsByState, getProductsBySite, getProductsByCategory } from './data/giProducts.js';
 
 // ==================== APP INITIALIZATION ====================
 class VirasaApp {
@@ -24,6 +25,7 @@ class VirasaApp {
     this.setupMap();
     this.setupTimeline();
     this.setupGallery();
+    this.setupShop();
     this.setupQuiz();
     this.setupScrollAnimations();
     this.setupScrollSpy();
@@ -293,7 +295,8 @@ class VirasaApp {
       { id: 'cuisine', label: '🍛 Cuisine', content: this.renderCuisineTab(site) },
       { id: 'art', label: '🎨 Art & Craft', content: this.renderArtTab(site) },
       { id: 'stories', label: '📚 Stories', content: this.renderStoriesTab(site) },
-      { id: 'facts', label: '💡 Fun Facts', content: this.renderFactsTab(site) }
+      { id: 'facts', label: '💡 Fun Facts', content: this.renderFactsTab(site) },
+      { id: 'shop', label: '🛍️ Shop', content: this.renderShopTab(site) }
     ];
 
     result.innerHTML = `
@@ -369,6 +372,30 @@ class VirasaApp {
     return `
       <h4>Did You Know?</h4>
       ${site.funFacts.map(f => `<div class="fun-fact-card">💡 ${f}</div>`).join('')}
+    `;
+  }
+
+  renderShopTab(site) {
+    const products = getProductsBySite(site.id);
+    if (products.length === 0) {
+      return `<p>No specific GI-Tagged products mapped to this site yet. Check the main Shop section for state-wide products.</p>`;
+    }
+    return `
+      <h4>Authentic Regional Handicrafts</h4>
+      <p style="font-size:var(--text-sm);color:rgba(255,255,255,0.7);margin-bottom:var(--space-4);">Support artisan communities by purchasing verified GI-tagged products directly from GiTAGGED.</p>
+      <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+        ${products.map(p => `
+          <div style="background:rgba(255,255,255,0.05);padding:var(--space-3);border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;gap:var(--space-3);">
+            <div style="font-size:2.5rem;">${p.emoji}</div>
+            <div style="flex:1;">
+              <h5 style="margin:0;font-size:var(--text-md);">${p.name}</h5>
+              <p style="margin:0;font-size:var(--text-xs);color:var(--royal-gold);font-family:var(--font-accent);">${p.nameHindi}</p>
+              <div style="font-size:var(--text-sm);color:var(--warm-white);font-weight:600;margin-top:4px;">${p.price}</div>
+            </div>
+            <a href="${p.buyLink}" target="_blank" rel="noopener noreferrer" class="btn-shop" style="font-size:var(--text-xs);padding:6px 12px;">Shop</a>
+          </div>
+        `).join('')}
+      </div>
     `;
   }
 
@@ -546,6 +573,14 @@ class VirasaApp {
       return s ? `<div class="panel-site-link" data-site="${s.id}">${s.emoji} ${s.name}</div>` : '';
     }).join('');
 
+    const shopProducts = getProductsByState(state.id);
+    const shopLinks = shopProducts.map(p => `
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+        <span style="font-size:var(--text-sm);">${p.emoji} ${p.name}</span>
+        <a href="${p.buyLink}" target="_blank" class="btn-shop" style="padding:4px 8px;font-size:0.7rem;">Shop</a>
+      </div>
+    `).join('');
+
     panel.innerHTML = `
       <div class="panel-header">
         <div class="panel-state-name">${state.name}</div>
@@ -575,6 +610,7 @@ class VirasaApp {
         </div>
       </div>
       ${siteLinks ? `<div class="panel-sites"><div class="panel-info-label" style="margin-bottom:var(--space-2);">🏛️ Heritage Sites in ${state.name}</div>${siteLinks}</div>` : ''}
+      ${shopLinks ? `<div class="panel-sites" style="margin-top:var(--space-3);"><div class="panel-info-label" style="margin-bottom:var(--space-2);">🛍️ GI-Tagged Products</div>${shopLinks}</div>` : ''}
     `;
 
     // Site link click handlers
@@ -894,6 +930,52 @@ class VirasaApp {
     }
 
     setTimeout(() => container.remove(), 5000);
+  }
+
+  // ==================== SHOP ====================
+  setupShop() {
+    const grid = document.getElementById('shopGrid');
+    const filters = document.getElementById('shopFilters');
+    if (!grid || !filters) return;
+
+    const renderProducts = (category) => {
+      const products = getProductsByCategory(category);
+      if (products.length === 0) {
+        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:var(--space-8);color:rgba(255,255,255,0.5);">No products found for this category.</div>';
+        return;
+      }
+      
+      grid.innerHTML = products.map((p, i) => `
+        <div class="shop-card" style="animation: fadeInUp 0.4s ease ${i * 0.05}s both;">
+          <div class="shop-card-visual">
+            ${p.emoji}
+            ${p.giTag ? '<span class="shop-card-badge">GI Tagged</span>' : ''}
+          </div>
+          <div class="shop-card-body">
+            <h4 class="shop-card-name">${p.name}</h4>
+            <div class="shop-card-hindi">${p.nameHindi}</div>
+            <div class="shop-card-region">📍 ${p.region}</div>
+            <p class="shop-card-desc">${p.description}</p>
+            <div class="shop-card-footer">
+              <span class="shop-price">${p.price}</span>
+              <a href="${p.buyLink}" target="_blank" rel="noopener noreferrer" class="btn-shop">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    };
+
+    // Initial render
+    renderProducts('all');
+
+    // Filters
+    filters.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        filters.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderProducts(btn.dataset.filter);
+      });
+    });
   }
 
   // ==================== SCROLL ANIMATIONS ====================
