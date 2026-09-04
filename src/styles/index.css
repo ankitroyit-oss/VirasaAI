@@ -87,12 +87,23 @@ input { font-family: inherit; }
 }
 
 .logo-icon { font-size: var(--text-2xl); }
-.logo-text { letter-spacing: -0.5px; }
+.logo-text { 
+  font-family: var(--font-logo); 
+  font-size: 1.8rem;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+}
 .logo-accent {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: var(--text-xl);
   background: var(--gradient-heritage);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  margin-left: 6px;
+  letter-spacing: -0.5px;
 }
 
 .navbar-links {
@@ -126,6 +137,35 @@ input { font-family: inherit; }
   height: 2px;
   background: var(--saffron);
   border-radius: var(--radius-full);
+}
+
+.nav-lang {
+  display: flex;
+  align-items: center;
+  margin-left: var(--space-2);
+}
+
+.lang-select {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--warm-white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-size: var(--text-xs);
+  font-family: var(--font-body);
+  outline: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.lang-select:hover, .lang-select:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--saffron);
+}
+
+.lang-select option {
+  background: var(--indigo-dark);
+  color: var(--warm-white);
 }
 
 .navbar-toggle {

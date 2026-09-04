@@ -46,8 +46,9 @@
   --gradient-gold: linear-gradient(135deg, var(--royal-gold-dark) 0%, var(--royal-gold) 50%, var(--royal-gold-light) 100%);
 
   /* ---- Typography ---- */
-  --font-heading: 'Outfit', system-ui, -apple-system, sans-serif;
-  --font-body: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-logo: 'Samarkan', sans-serif;
+  --font-heading: 'Open Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Open Sans', system-ui, -apple-system, sans-serif;
   --font-accent: 'Noto Serif Devanagari', serif;
 
   --text-xs: 0.75rem;
