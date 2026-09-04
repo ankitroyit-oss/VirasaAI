@@ -1,6 +1,7 @@
 /* =============================================
    VirasaAI — Heritage Sites Database
    20 curated sites with full cultural data
+   Cache bust: 1
    ============================================= */
 
 export const heritageSites = [
