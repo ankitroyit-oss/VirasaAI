@@ -169,7 +169,8 @@ input { font-family: inherit; }
 }
 
 /* Hide Google Translate UI */
-.goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon { display: none !important; }
+iframe.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
+.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
 body { top: 0px !important; }
 #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
 .goog-text-highlight { background: none !important; box-shadow: none !important; }
