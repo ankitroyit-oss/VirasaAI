@@ -641,8 +641,10 @@ class VirasaApp {
     lightbox.style.display = 'flex';
 
     content.innerHTML = `
-      <div style="text-align:center;margin-bottom:var(--space-6);">
-        <span style="font-size:4rem;">${site.emoji}</span>
+      <div style="width:100%;height:250px;border-radius:var(--radius-lg);overflow:hidden;margin-bottom:var(--space-6);">
+        <img src="${site.image || 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800'}" style="width:100%;height:100%;object-fit:cover;" alt="${site.name}">
+      </div>
+      <div style="text-align:center;">
         <h3 style="font-size:var(--text-3xl);font-weight:800;margin:var(--space-3) 0;">${site.name}</h3>
         <p style="font-family:var(--font-accent);color:var(--royal-gold);">${site.nameHindi}</p>
         <p style="color:rgba(255,255,255,0.5);font-size:var(--text-sm);margin-top:var(--space-2);">📍 ${site.location.city}, ${site.location.state} · ${site.period}</p>

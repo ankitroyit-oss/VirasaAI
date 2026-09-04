@@ -384,7 +384,7 @@ export const giProducts = [
   {
     id: "kasavu-mundu",
     name: "Kerala Kasavu Mundu & Saree",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Chanderi_Silk_Sari_outside_a_village_home_in_Pranpur._%287045778685%29.jpg/960px-Chanderi_Silk_Sari_outside_a_village_home_in_Pranpur._%287045778685%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "केरल कसावु",
     category: "handloom",
     region: "Balaramapuram, Kerala",
