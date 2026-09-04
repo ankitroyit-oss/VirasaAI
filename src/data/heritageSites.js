@@ -7,7 +7,7 @@ export const heritageSites = [
   {
     id: "taj-mahal",
     name: "Taj Mahal",
-    image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/960px-Taj_Mahal_%28Edited%29.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "ताज महल",
     location: { state: "Uttar Pradesh", city: "Agra", coordinates: [27.1751, 78.0421] },
     category: "monument",
@@ -45,7 +45,7 @@ export const heritageSites = [
   {
     id: "red-fort",
     name: "Red Fort",
-    image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Delhi_fort.jpg/960px-Delhi_fort.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "लाल किला",
     location: { state: "Delhi", city: "New Delhi", coordinates: [28.6562, 77.2410] },
     category: "fort",
@@ -81,7 +81,7 @@ export const heritageSites = [
   {
     id: "qutb-minar",
     name: "Qutb Minar",
-    image: "https://images.unsplash.com/photo-1621360156903-889af2e99d90?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Qutb_Minar_2022.jpg/960px-Qutb_Minar_2022.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "कुतुब मीनार",
     location: { state: "Delhi", city: "New Delhi", coordinates: [28.5245, 77.1855] },
     category: "monument",
@@ -115,7 +115,7 @@ export const heritageSites = [
   {
     id: "hawa-mahal",
     name: "Hawa Mahal",
-    image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg/960px-East_facade_Hawa_Mahal_Jaipur_from_ground_level_%28July_2022%29_-_img_01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "हवा महल",
     location: { state: "Rajasthan", city: "Jaipur", coordinates: [26.9239, 75.8267] },
     category: "monument",
@@ -152,7 +152,7 @@ export const heritageSites = [
   {
     id: "amber-fort",
     name: "Amber Fort",
-    image: "https://images.unsplash.com/photo-1565545592550-7f9fc6db18de?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/20191219_Fort_Amber%2C_Amer%2C_Jaipur_0955_9481.jpg/960px-20191219_Fort_Amber%2C_Amer%2C_Jaipur_0955_9481.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "आमेर किला",
     location: { state: "Rajasthan", city: "Jaipur", coordinates: [26.9855, 75.8513] },
     category: "fort",
@@ -187,7 +187,7 @@ export const heritageSites = [
   {
     id: "khajuraho",
     name: "Khajuraho Temples",
-    image: "https://images.unsplash.com/photo-1616429548488-8cfc1bc251c4?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Khajuraho-Lakshmana_temple.JPG/960px-Khajuraho-Lakshmana_temple.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "खजुराहो मंदिर",
     location: { state: "Madhya Pradesh", city: "Khajuraho", coordinates: [24.8318, 79.9199] },
     category: "temple",
@@ -221,7 +221,7 @@ export const heritageSites = [
   {
     id: "konark-sun-temple",
     name: "Konark Sun Temple",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Konarka_Temple.jpg/960px-Konarka_Temple.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "कोणार्क सूर्य मंदिर",
     location: { state: "Odisha", city: "Konark", coordinates: [19.8876, 86.0945] },
     category: "temple",
@@ -257,7 +257,7 @@ export const heritageSites = [
   {
     id: "hampi",
     name: "Hampi (Vijayanagara)",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wide_angle_of_Galigopuram_of_Virupaksha_Temple%2C_Hampi_%2804%29_%28cropped%29.jpg/960px-Wide_angle_of_Galigopuram_of_Virupaksha_Temple%2C_Hampi_%2804%29_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "हम्पी",
     location: { state: "Karnataka", city: "Hampi", coordinates: [15.3350, 76.4600] },
     category: "monument",
@@ -293,7 +293,7 @@ export const heritageSites = [
   {
     id: "ajanta-caves",
     name: "Ajanta Caves",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Ajanta_%2863%29.jpg/960px-Ajanta_%2863%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "अजंता गुफाएँ",
     location: { state: "Maharashtra", city: "Aurangabad", coordinates: [20.5519, 75.7033] },
     category: "cave",
@@ -364,7 +364,7 @@ export const heritageSites = [
   {
     id: "meenakshi-temple",
     name: "Meenakshi Amman Temple",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/An_aerial_view_of_Madurai_city_from_atop_of_Meenakshi_Amman_temple.jpg/960px-An_aerial_view_of_Madurai_city_from_atop_of_Meenakshi_Amman_temple.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "मीनाक्षी अम्मन मंदिर",
     location: { state: "Tamil Nadu", city: "Madurai", coordinates: [9.9195, 78.1193] },
     category: "temple",
@@ -400,7 +400,7 @@ export const heritageSites = [
   {
     id: "golden-temple",
     name: "Golden Temple",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/The_Golden_Temple_of_Amrithsar_7.jpg/960px-The_Golden_Temple_of_Amrithsar_7.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "स्वर्ण मंदिर",
     location: { state: "Punjab", city: "Amritsar", coordinates: [31.6200, 74.8765] },
     category: "temple",
@@ -436,7 +436,7 @@ export const heritageSites = [
   {
     id: "mysore-palace",
     name: "Mysore Palace",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mysore_Palace_Morning.jpg/960px-Mysore_Palace_Morning.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "मैसूर पैलेस",
     location: { state: "Karnataka", city: "Mysuru", coordinates: [12.3052, 76.6552] },
     category: "fort",
@@ -472,7 +472,7 @@ export const heritageSites = [
   {
     id: "sanchi-stupa",
     name: "Sanchi Stupa",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/East_Gateway_-_Stupa_1_-_Sanchi_Hill_2013-02-21_4398.JPG/960px-East_Gateway_-_Stupa_1_-_Sanchi_Hill_2013-02-21_4398.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "सांची स्तूप",
     location: { state: "Madhya Pradesh", city: "Sanchi", coordinates: [23.4793, 77.7399] },
     category: "monument",
@@ -506,7 +506,7 @@ export const heritageSites = [
   {
     id: "rani-ki-vav",
     name: "Rani ki Vav",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Rani_ki_vav_02.jpg/960px-Rani_ki_vav_02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "रानी की वाव",
     location: { state: "Gujarat", city: "Patan", coordinates: [23.8590, 72.1019] },
     category: "other",
@@ -542,7 +542,7 @@ export const heritageSites = [
   {
     id: "charminar",
     name: "Charminar",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Charminar_Hyderabad_1.jpg/960px-Charminar_Hyderabad_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "चारमीनार",
     location: { state: "Telangana", city: "Hyderabad", coordinates: [17.3616, 78.4747] },
     category: "monument",
@@ -579,7 +579,7 @@ export const heritageSites = [
   {
     id: "victoria-memorial",
     name: "Victoria Memorial",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Victoria_Memorial_situated_in_Kolkata.jpg/960px-Victoria_Memorial_situated_in_Kolkata.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "विक्टोरिया मेमोरियल",
     location: { state: "West Bengal", city: "Kolkata", coordinates: [22.5448, 88.3426] },
     category: "monument",
@@ -615,7 +615,7 @@ export const heritageSites = [
   {
     id: "brihadeshwara-temple",
     name: "Brihadeshwara Temple",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_%28edit%29.jpg/960px-Brihadisvara_Temple_during_Maha_Shivaratri-WUS03611_%28edit%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "बृहदेश्वर मंदिर",
     location: { state: "Tamil Nadu", city: "Thanjavur", coordinates: [10.7828, 79.1318] },
     category: "temple",
@@ -650,7 +650,7 @@ export const heritageSites = [
   {
     id: "mahabalipuram",
     name: "Mahabalipuram (Mamallapuram)",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/A_collage_of_Mamallapuram_town_Tamil_Nadu_India.jpg/960px-A_collage_of_Mamallapuram_town_Tamil_Nadu_India.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "महाबलीपुरम",
     location: { state: "Tamil Nadu", city: "Mahabalipuram", coordinates: [12.6172, 80.1927] },
     category: "monument",
@@ -685,7 +685,7 @@ export const heritageSites = [
   {
     id: "gateway-of-india",
     name: "Gateway of India",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Mumbai_03-2016_30_Gateway_of_India.jpg/960px-Mumbai_03-2016_30_Gateway_of_India.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "गेटवे ऑफ इंडिया",
     location: { state: "Maharashtra", city: "Mumbai", coordinates: [18.9220, 72.8347] },
     category: "monument",

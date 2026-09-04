@@ -8,7 +8,7 @@ export const giProducts = [
   {
     id: "agra-marble-inlay",
     name: "Agra Marble Inlay (Pietra Dura)",
-    image: "https://images.unsplash.com/photo-1601058223611-3e4b37064d78?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Cathedral_Virgin_Mary-7.jpg/960px-Cathedral_Virgin_Mary-7.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "आगरा संगमरमर जड़ाई",
     category: "handicraft",
     region: "Agra, Uttar Pradesh",
@@ -24,7 +24,7 @@ export const giProducts = [
   {
     id: "lucknow-chikankari",
     name: "Lucknow Chikankari Embroidery",
-    image: "https://images.unsplash.com/photo-1580797157831-2fb0e835c249?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Craft_Artisans_of_India_02.jpg/960px-Craft_Artisans_of_India_02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "लखनऊ चिकनकारी",
     category: "handloom",
     region: "Lucknow, Uttar Pradesh",
@@ -40,7 +40,7 @@ export const giProducts = [
   {
     id: "varanasi-banarasi-silk",
     name: "Banarasi Silk Saree",
-    image: "https://images.unsplash.com/photo-1610224169720-d3a39fbc8537?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/4e/%27Sari%27_from_Varanasi_%28north-central_India%29%2C_silk_and_gold-wrapped_silk_yarn_with_supplementary_weft_brocade.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     nameHindi: "बनारसी रेशमी साड़ी",
     category: "handloom",
     region: "Varanasi, Uttar Pradesh",
@@ -58,7 +58,7 @@ export const giProducts = [
   {
     id: "jaipur-blue-pottery",
     name: "Jaipur Blue Pottery",
-    image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Dr._Bhau_Daji_Lad_Museum_JEG1715.JPG/960px-Dr._Bhau_Daji_Lad_Museum_JEG1715.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "जयपुर ब्लू पॉटरी",
     category: "handicraft",
     region: "Jaipur, Rajasthan",
@@ -74,7 +74,7 @@ export const giProducts = [
   {
     id: "rajasthan-bandhani",
     name: "Rajasthani Bandhani (Tie-Dye)",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Bandhani_print_open.JPG/960px-Bandhani_print_open.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "राजस्थानी बंधनी",
     category: "handloom",
     region: "Jodhpur & Jaipur, Rajasthan",
@@ -90,7 +90,7 @@ export const giProducts = [
   {
     id: "rajasthan-block-print",
     name: "Sanganer Block Print Textiles",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Sangheji_jain_temple%2Csanganer%2Cjaipur.JPG/960px-Sangheji_jain_temple%2Csanganer%2Cjaipur.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "सांगानेर ब्लॉक प्रिंट",
     category: "handloom",
     region: "Sanganer, Rajasthan",
@@ -108,7 +108,7 @@ export const giProducts = [
   {
     id: "purulia-chhau-mask",
     name: "Purulia Chhau Dance Mask",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Chhau_Nritya_%281%29.jpg/960px-Chhau_Nritya_%281%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "पुरुलिया छऊ मुखौटा",
     category: "handicraft",
     region: "Purulia, West Bengal",
@@ -124,7 +124,7 @@ export const giProducts = [
   {
     id: "shantiniketan-leather",
     name: "Shantiniketan Leather Goods",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Batik_Stole_2_by_Jamuna_Sen.jpg/960px-Batik_Stole_2_by_Jamuna_Sen.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "शांतिनिकेतन चमड़ा",
     category: "handicraft",
     region: "Birbhum, West Bengal",
@@ -140,7 +140,7 @@ export const giProducts = [
   {
     id: "baluchari-saree",
     name: "Baluchari Silk Saree",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Kanchipuram_sarees_%287642282772%29.jpg/960px-Kanchipuram_sarees_%287642282772%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "बालूचरी साड़ी",
     category: "handloom",
     region: "Bishnupur, West Bengal",
@@ -158,7 +158,7 @@ export const giProducts = [
   {
     id: "mysore-silk-saree",
     name: "Mysore Silk Saree",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Mysore_Silk_Saree.jpg/960px-Mysore_Silk_Saree.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "मैसूर रेशमी साड़ी",
     category: "handloom",
     region: "Mysuru, Karnataka",
@@ -174,7 +174,7 @@ export const giProducts = [
   {
     id: "channapatna-toys",
     name: "Channapatna Wooden Toys",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Wooden_toys.JPG/960px-Wooden_toys.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "चन्नपटना लकड़ी के खिलौने",
     category: "handicraft",
     region: "Channapatna, Karnataka",
@@ -192,7 +192,7 @@ export const giProducts = [
   {
     id: "thanjavur-painting",
     name: "Thanjavur (Tanjore) Painting",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Thanjavur_art_from_south_India.jpg/960px-Thanjavur_art_from_south_India.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "तंजावुर पेंटिंग",
     category: "painting",
     region: "Thanjavur, Tamil Nadu",
@@ -208,7 +208,7 @@ export const giProducts = [
   {
     id: "kanchipuram-silk",
     name: "Kanchipuram Silk Saree",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Kanchipuram_sarees_%287642282772%29.jpg/960px-Kanchipuram_sarees_%287642282772%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "कांचीपुरम रेशम साड़ी",
     category: "handloom",
     region: "Kanchipuram, Tamil Nadu",
@@ -226,7 +226,7 @@ export const giProducts = [
   {
     id: "pattachitra-painting",
     name: "Odisha Pattachitra Painting",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/7d/Odisha_Pattachitara_Depicting_Unconditional_Love_between_Radha_Krushna.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     nameHindi: "पट्टचित्र पेंटिंग",
     category: "painting",
     region: "Puri, Odisha",
@@ -244,7 +244,7 @@ export const giProducts = [
   {
     id: "chanderi-fabric",
     name: "Chanderi Fabric",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Chanderi_Silk_Sari_outside_a_village_home_in_Pranpur._%287045778685%29.jpg/960px-Chanderi_Silk_Sari_outside_a_village_home_in_Pranpur._%287045778685%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "चंदेरी कपड़ा",
     category: "handloom",
     region: "Chanderi, Madhya Pradesh",
@@ -262,7 +262,7 @@ export const giProducts = [
   {
     id: "patan-patola",
     name: "Patan Patola Saree",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Rani_ki_vav_02.jpg/960px-Rani_ki_vav_02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "पाटन पटोला",
     category: "handloom",
     region: "Patan, Gujarat",
@@ -280,7 +280,7 @@ export const giProducts = [
   {
     id: "nirmal-painting",
     name: "Nirmal Painting",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Nirmal_Painting.jpg/960px-Nirmal_Painting.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "निर्मल पेंटिंग",
     category: "painting",
     region: "Nirmal, Telangana",
@@ -296,7 +296,7 @@ export const giProducts = [
   {
     id: "hyderabad-pearls",
     name: "Hyderabad Pearls",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Satlada.jpg/960px-Satlada.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "हैदराबादी मोती",
     category: "jewellery",
     region: "Hyderabad, Telangana",
@@ -314,7 +314,7 @@ export const giProducts = [
   {
     id: "paithani-saree",
     name: "Paithani Silk Saree",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Paithani_Bridal_Sari_LACMA_M.75.4.23_%282_of_2%29.jpg/960px-Paithani_Bridal_Sari_LACMA_M.75.4.23_%282_of_2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "पैठणी साड़ी",
     category: "handloom",
     region: "Paithan, Maharashtra",
@@ -330,7 +330,7 @@ export const giProducts = [
   {
     id: "kolhapuri-chappal",
     name: "Kolhapuri Chappal (Leather Sandals)",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Indian_chappal%2C_Kolhapur%2C_late_20th_century_-_Bata_Shoe_Museum_-_DSC00445.JPG/960px-Indian_chappal%2C_Kolhapur%2C_late_20th_century_-_Bata_Shoe_Museum_-_DSC00445.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "कोल्हापुरी चप्पल",
     category: "handicraft",
     region: "Kolhapur, Maharashtra",
@@ -348,7 +348,7 @@ export const giProducts = [
   {
     id: "phulkari-embroidery",
     name: "Punjab Phulkari Embroidery",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Contemporary_Phulkari_design.jpg/960px-Contemporary_Phulkari_design.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "पंजाब फुलकारी",
     category: "handloom",
     region: "Punjab",
@@ -366,7 +366,7 @@ export const giProducts = [
   {
     id: "kalamkari-art",
     name: "Machilipatnam Kalamkari",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Kalamkari_painting_of_Lord_Vishnu_on_serpent_Ananta.jpg/960px-Kalamkari_painting_of_Lord_Vishnu_on_serpent_Ananta.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     nameHindi: "कलमकारी",
     category: "painting",
     region: "Machilipatnam, Andhra Pradesh",
@@ -402,7 +402,7 @@ export const giProducts = [
   {
     id: "kashmir-pashmina",
     name: "Kashmir Pashmina Shawl",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/9c/Empress_Josephine.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     nameHindi: "कश्मीरी पश्मीना",
     category: "handloom",
     region: "Srinagar, Kashmir",
@@ -418,7 +418,7 @@ export const giProducts = [
   {
     id: "kashmir-walnut-wood",
     name: "Kashmir Walnut Wood Carving",
-    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/42/Walnut_wood_carving.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     nameHindi: "कश्मीरी अखरोट की लकड़ी",
     category: "handicraft",
     region: "Srinagar, Kashmir",
