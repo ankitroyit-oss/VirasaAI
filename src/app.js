@@ -742,7 +742,7 @@ class VirasaApp {
       return `
         <div class="gallery-card" data-site="${site.id}">
           <div class="gallery-card-visual" style="background: linear-gradient(135deg, ${bgColor}33, ${bgColor}11);">
-            <span>${site.emoji}</span>
+            <img src="${site.image || 'https://images.unsplash.com/photo-1600100397608-2e06718a38c2?q=80&w=800&auto=format&fit=crop'}" alt="${site.name}" loading="lazy">
           </div>
           <div class="gallery-card-body">
             <div class="gallery-card-name">${site.name}</div>
@@ -961,7 +961,7 @@ class VirasaApp {
       grid.innerHTML = products.map((p, i) => `
         <div class="shop-card" style="animation: fadeInUp 0.4s ease ${i * 0.05}s both;">
           <div class="shop-card-visual">
-            ${p.emoji}
+            <img src="${p.image || 'https://images.unsplash.com/photo-1606293926075-69a00dbfde81?q=80&w=800&auto=format&fit=crop'}" alt="${p.name}" loading="lazy">
             ${p.giTag ? '<span class="shop-card-badge">GI Tagged</span>' : ''}
           </div>
           <div class="shop-card-body">
