@@ -1,13 +1,13 @@
 /* =============================================
    VirasaAI — Heritage Sites Database
    20 curated sites with full cultural data
-   Cache bust: 1
    ============================================= */
 
 export const heritageSites = [
   {
     id: "taj-mahal",
     name: "Taj Mahal",
+    image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&q=80&w=800",
     nameHindi: "ताज महल",
     location: { state: "Uttar Pradesh", city: "Agra", coordinates: [27.1751, 78.0421] },
     category: "monument",
@@ -45,6 +45,7 @@ export const heritageSites = [
   {
     id: "red-fort",
     name: "Red Fort",
+    image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&q=80&w=800",
     nameHindi: "लाल किला",
     location: { state: "Delhi", city: "New Delhi", coordinates: [28.6562, 77.2410] },
     category: "fort",
@@ -80,6 +81,7 @@ export const heritageSites = [
   {
     id: "qutb-minar",
     name: "Qutb Minar",
+    image: "https://images.unsplash.com/photo-1621360156903-889af2e99d90?auto=format&fit=crop&q=80&w=800",
     nameHindi: "कुतुब मीनार",
     location: { state: "Delhi", city: "New Delhi", coordinates: [28.5245, 77.1855] },
     category: "monument",
@@ -113,6 +115,7 @@ export const heritageSites = [
   {
     id: "hawa-mahal",
     name: "Hawa Mahal",
+    image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&q=80&w=800",
     nameHindi: "हवा महल",
     location: { state: "Rajasthan", city: "Jaipur", coordinates: [26.9239, 75.8267] },
     category: "monument",
@@ -149,6 +152,7 @@ export const heritageSites = [
   {
     id: "amber-fort",
     name: "Amber Fort",
+    image: "https://images.unsplash.com/photo-1565545592550-7f9fc6db18de?auto=format&fit=crop&q=80&w=800",
     nameHindi: "आमेर किला",
     location: { state: "Rajasthan", city: "Jaipur", coordinates: [26.9855, 75.8513] },
     category: "fort",
@@ -183,6 +187,7 @@ export const heritageSites = [
   {
     id: "khajuraho",
     name: "Khajuraho Temples",
+    image: "https://images.unsplash.com/photo-1616429548488-8cfc1bc251c4?auto=format&fit=crop&q=80&w=800",
     nameHindi: "खजुराहो मंदिर",
     location: { state: "Madhya Pradesh", city: "Khajuraho", coordinates: [24.8318, 79.9199] },
     category: "temple",
@@ -216,6 +221,7 @@ export const heritageSites = [
   {
     id: "konark-sun-temple",
     name: "Konark Sun Temple",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "कोणार्क सूर्य मंदिर",
     location: { state: "Odisha", city: "Konark", coordinates: [19.8876, 86.0945] },
     category: "temple",
@@ -251,6 +257,7 @@ export const heritageSites = [
   {
     id: "hampi",
     name: "Hampi (Vijayanagara)",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "हम्पी",
     location: { state: "Karnataka", city: "Hampi", coordinates: [15.3350, 76.4600] },
     category: "monument",
@@ -286,6 +293,7 @@ export const heritageSites = [
   {
     id: "ajanta-caves",
     name: "Ajanta Caves",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "अजंता गुफाएँ",
     location: { state: "Maharashtra", city: "Aurangabad", coordinates: [20.5519, 75.7033] },
     category: "cave",
@@ -321,6 +329,7 @@ export const heritageSites = [
   {
     id: "ellora-caves",
     name: "Ellora Caves",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "एलोरा गुफाएँ",
     location: { state: "Maharashtra", city: "Aurangabad", coordinates: [20.0258, 75.1780] },
     category: "cave",
@@ -355,6 +364,7 @@ export const heritageSites = [
   {
     id: "meenakshi-temple",
     name: "Meenakshi Amman Temple",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "मीनाक्षी अम्मन मंदिर",
     location: { state: "Tamil Nadu", city: "Madurai", coordinates: [9.9195, 78.1193] },
     category: "temple",
@@ -390,6 +400,7 @@ export const heritageSites = [
   {
     id: "golden-temple",
     name: "Golden Temple",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "स्वर्ण मंदिर",
     location: { state: "Punjab", city: "Amritsar", coordinates: [31.6200, 74.8765] },
     category: "temple",
@@ -425,6 +436,7 @@ export const heritageSites = [
   {
     id: "mysore-palace",
     name: "Mysore Palace",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "मैसूर पैलेस",
     location: { state: "Karnataka", city: "Mysuru", coordinates: [12.3052, 76.6552] },
     category: "fort",
@@ -460,6 +472,7 @@ export const heritageSites = [
   {
     id: "sanchi-stupa",
     name: "Sanchi Stupa",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "सांची स्तूप",
     location: { state: "Madhya Pradesh", city: "Sanchi", coordinates: [23.4793, 77.7399] },
     category: "monument",
@@ -493,6 +506,7 @@ export const heritageSites = [
   {
     id: "rani-ki-vav",
     name: "Rani ki Vav",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "रानी की वाव",
     location: { state: "Gujarat", city: "Patan", coordinates: [23.8590, 72.1019] },
     category: "other",
@@ -528,6 +542,7 @@ export const heritageSites = [
   {
     id: "charminar",
     name: "Charminar",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "चारमीनार",
     location: { state: "Telangana", city: "Hyderabad", coordinates: [17.3616, 78.4747] },
     category: "monument",
@@ -564,6 +579,7 @@ export const heritageSites = [
   {
     id: "victoria-memorial",
     name: "Victoria Memorial",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "विक्टोरिया मेमोरियल",
     location: { state: "West Bengal", city: "Kolkata", coordinates: [22.5448, 88.3426] },
     category: "monument",
@@ -599,6 +615,7 @@ export const heritageSites = [
   {
     id: "brihadeshwara-temple",
     name: "Brihadeshwara Temple",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "बृहदेश्वर मंदिर",
     location: { state: "Tamil Nadu", city: "Thanjavur", coordinates: [10.7828, 79.1318] },
     category: "temple",
@@ -633,6 +650,7 @@ export const heritageSites = [
   {
     id: "mahabalipuram",
     name: "Mahabalipuram (Mamallapuram)",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "महाबलीपुरम",
     location: { state: "Tamil Nadu", city: "Mahabalipuram", coordinates: [12.6172, 80.1927] },
     category: "monument",
@@ -667,6 +685,7 @@ export const heritageSites = [
   {
     id: "gateway-of-india",
     name: "Gateway of India",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "गेटवे ऑफ इंडिया",
     location: { state: "Maharashtra", city: "Mumbai", coordinates: [18.9220, 72.8347] },
     category: "monument",

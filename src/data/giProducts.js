@@ -8,6 +8,7 @@ export const giProducts = [
   {
     id: "agra-marble-inlay",
     name: "Agra Marble Inlay (Pietra Dura)",
+    image: "https://images.unsplash.com/photo-1601058223611-3e4b37064d78?auto=format&fit=crop&q=80&w=800",
     nameHindi: "आगरा संगमरमर जड़ाई",
     category: "handicraft",
     region: "Agra, Uttar Pradesh",
@@ -19,11 +20,11 @@ export const giProducts = [
     artisanStory: "The descendants of artisans who built the Taj Mahal continue this craft today in the narrow lanes of Agra, using the same techniques passed down for 16 generations.",
     buyLink: "https://www.gitagged.com/online-store/handicraft/",
     emoji: "💎",
-    image: "marble-inlay"
   },
   {
     id: "lucknow-chikankari",
     name: "Lucknow Chikankari Embroidery",
+    image: "https://images.unsplash.com/photo-1580797157831-2fb0e835c249?auto=format&fit=crop&q=80&w=800",
     nameHindi: "लखनऊ चिकनकारी",
     category: "handloom",
     region: "Lucknow, Uttar Pradesh",
@@ -35,11 +36,11 @@ export const giProducts = [
     artisanStory: "Over 2.5 lakh artisans, mostly women, depend on Chikankari for their livelihood. The craft was patronized by Mughal empress Noor Jahan.",
     buyLink: "https://www.gitagged.com/online-store/handloom/",
     emoji: "🧵",
-    image: "chikankari"
   },
   {
     id: "varanasi-banarasi-silk",
     name: "Banarasi Silk Saree",
+    image: "https://images.unsplash.com/photo-1610224169720-d3a39fbc8537?auto=format&fit=crop&q=80&w=800",
     nameHindi: "बनारसी रेशमी साड़ी",
     category: "handloom",
     region: "Varanasi, Uttar Pradesh",
@@ -51,13 +52,13 @@ export const giProducts = [
     artisanStory: "Banarasi weaving dates back 500+ years. The weavers of Varanasi use traditional pit looms and hand-twisted gold threads to create these masterpieces.",
     buyLink: "https://www.gitagged.com/online-store/handloom/",
     emoji: "👗",
-    image: "banarasi-silk"
   },
 
   // ===== RAJASTHAN =====
   {
     id: "jaipur-blue-pottery",
     name: "Jaipur Blue Pottery",
+    image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&q=80&w=800",
     nameHindi: "जयपुर ब्लू पॉटरी",
     category: "handicraft",
     region: "Jaipur, Rajasthan",
@@ -69,11 +70,11 @@ export const giProducts = [
     artisanStory: "Brought to India via Persia and Central Asia, this craft nearly went extinct before being revived by Rajasthani artisans in the 20th century.",
     buyLink: "https://www.gitagged.com/online-store/handicraft/",
     emoji: "🏺",
-    image: "blue-pottery"
   },
   {
     id: "rajasthan-bandhani",
     name: "Rajasthani Bandhani (Tie-Dye)",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "राजस्थानी बंधनी",
     category: "handloom",
     region: "Jodhpur & Jaipur, Rajasthan",
@@ -85,11 +86,11 @@ export const giProducts = [
     artisanStory: "The earliest evidence of Bandhani dates to the Indus Valley Civilization. Khatri community artisans in Rajasthan have preserved this 5,000-year-old art.",
     buyLink: "https://www.gitagged.com/online-store/handloom/",
     emoji: "🎨",
-    image: "bandhani"
   },
   {
     id: "rajasthan-block-print",
     name: "Sanganer Block Print Textiles",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "सांगानेर ब्लॉक प्रिंट",
     category: "handloom",
     region: "Sanganer, Rajasthan",
@@ -101,13 +102,13 @@ export const giProducts = [
     artisanStory: "Sanganer's printing tradition is 500 years old. Artisans carve intricate teak wood blocks by hand and use vegetable-based dyes.",
     buyLink: "https://www.gitagged.com/online-store/handloom/",
     emoji: "🖨️",
-    image: "block-print"
   },
 
   // ===== WEST BENGAL =====
   {
     id: "purulia-chhau-mask",
     name: "Purulia Chhau Dance Mask",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "पुरुलिया छऊ मुखौटा",
     category: "handicraft",
     region: "Purulia, West Bengal",
@@ -119,11 +120,11 @@ export const giProducts = [
     artisanStory: "Sutradhar community artisans in Charida village (Purulia) have been crafting these masks for generations. The entire village's economy depends on this craft.",
     buyLink: "https://www.gitagged.com/online-store/handicraft/",
     emoji: "🎭",
-    image: "chhau-mask"
   },
   {
     id: "shantiniketan-leather",
     name: "Shantiniketan Leather Goods",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "शांतिनिकेतन चमड़ा",
     category: "handicraft",
     region: "Birbhum, West Bengal",
@@ -135,11 +136,11 @@ export const giProducts = [
     artisanStory: "Inspired by Japanese leather craft brought to Shantiniketan by Tagore, local artisans blended it with Indian folk art traditions.",
     buyLink: "https://www.gitagged.com/online-store/handicraft/",
     emoji: "👜",
-    image: "shantiniketan-leather"
   },
   {
     id: "baluchari-saree",
     name: "Baluchari Silk Saree",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "बालूचरी साड़ी",
     category: "handloom",
     region: "Bishnupur, West Bengal",
@@ -151,13 +152,13 @@ export const giProducts = [
     artisanStory: "Originating in Murshidabad under Nawab patronage, the craft shifted to Bishnupur. Weavers depict entire epic scenes in thread.",
     buyLink: "https://www.gitagged.com/online-store/handloom/",
     emoji: "👗",
-    image: "baluchari"
   },
 
   // ===== KARNATAKA =====
   {
     id: "mysore-silk-saree",
     name: "Mysore Silk Saree",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "मैसूर रेशमी साड़ी",
     category: "handloom",
     region: "Mysuru, Karnataka",
@@ -169,11 +170,11 @@ export const giProducts = [
     artisanStory: "Tipu Sultan established silk weaving in Mysore in the 18th century. Today, KSIC (Karnataka Silk Industries Corporation) certifies authentic Mysore silks.",
     buyLink: "https://www.gitagged.com/online-store/handloom/",
     emoji: "✨",
-    image: "mysore-silk"
   },
   {
     id: "channapatna-toys",
     name: "Channapatna Wooden Toys",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "चन्नपटना लकड़ी के खिलौने",
     category: "handicraft",
     region: "Channapatna, Karnataka",
@@ -185,13 +186,13 @@ export const giProducts = [
     artisanStory: "This 200-year-old craft was introduced by Tipu Sultan who invited Persian artisans. Today 5,000+ artisans keep the tradition alive.",
     buyLink: "https://www.gitagged.com/online-store/handicraft/",
     emoji: "🪀",
-    image: "channapatna-toys"
   },
 
   // ===== TAMIL NADU =====
   {
     id: "thanjavur-painting",
     name: "Thanjavur (Tanjore) Painting",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "तंजावुर पेंटिंग",
     category: "painting",
     region: "Thanjavur, Tamil Nadu",
@@ -203,11 +204,11 @@ export const giProducts = [
     artisanStory: "Patronized by the Chola and Nayak dynasties, these paintings use 22-karat gold leaf. A single painting can take 2-6 months to complete.",
     buyLink: "https://www.gitagged.com/online-store/indian-paintings-traditional/",
     emoji: "🖼️",
-    image: "tanjore-painting"
   },
   {
     id: "kanchipuram-silk",
     name: "Kanchipuram Silk Saree",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "कांचीपुरम रेशम साड़ी",
     category: "handloom",
     region: "Kanchipuram, Tamil Nadu",
@@ -219,13 +220,13 @@ export const giProducts = [
     artisanStory: "Weavers of Kanchipuram trace their lineage to sage Markanda, the master weaver of the gods. Each saree uses 2 shuttles worked by 2 weavers.",
     buyLink: "https://www.gitagged.com/online-store/handloom/",
     emoji: "👗",
-    image: "kanchipuram-silk"
   },
 
   // ===== ODISHA =====
   {
     id: "pattachitra-painting",
     name: "Odisha Pattachitra Painting",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "पट्टचित्र पेंटिंग",
     category: "painting",
     region: "Puri, Odisha",
@@ -237,13 +238,13 @@ export const giProducts = [
     artisanStory: "Chitrakars of Raghurajpur village near Puri have painted Pattachitras for over 1,000 years. Every home in the village is an artist's studio.",
     buyLink: "https://www.gitagged.com/online-store/indian-paintings-traditional/",
     emoji: "🎨",
-    image: "pattachitra"
   },
 
   // ===== MADHYA PRADESH =====
   {
     id: "chanderi-fabric",
     name: "Chanderi Fabric",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "चंदेरी कपड़ा",
     category: "handloom",
     region: "Chanderi, Madhya Pradesh",
@@ -255,13 +256,13 @@ export const giProducts = [
     artisanStory: "Chanderi weaving dates back to the Vedic period. Mughal records mention Chanderi fabric being gifted to royalty across Asia.",
     buyLink: "https://www.gitagged.com/online-store/handloom/",
     emoji: "🧶",
-    image: "chanderi"
   },
 
   // ===== GUJARAT =====
   {
     id: "patan-patola",
     name: "Patan Patola Saree",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "पाटन पटोला",
     category: "handloom",
     region: "Patan, Gujarat",
@@ -273,13 +274,13 @@ export const giProducts = [
     artisanStory: "Only 3 Salvi family looms in Patan still produce authentic Patola. A single saree takes 6-12 months to weave. The technique is a closely guarded family secret.",
     buyLink: "https://www.gitagged.com/online-store/handloom/",
     emoji: "💎",
-    image: "patola"
   },
 
   // ===== TELANGANA =====
   {
     id: "nirmal-painting",
     name: "Nirmal Painting",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "निर्मल पेंटिंग",
     category: "painting",
     region: "Nirmal, Telangana",
@@ -291,11 +292,11 @@ export const giProducts = [
     artisanStory: "Nirmal paintings were patronized by the Nizam of Hyderabad. The craft uses poniki wood and natural pigments mixed with herbal gum.",
     buyLink: "https://www.gitagged.com/online-store/indian-paintings-traditional/",
     emoji: "🎨",
-    image: "nirmal"
   },
   {
     id: "hyderabad-pearls",
     name: "Hyderabad Pearls",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "हैदराबादी मोती",
     category: "jewellery",
     region: "Hyderabad, Telangana",
@@ -307,13 +308,13 @@ export const giProducts = [
     artisanStory: "The Charminar area is the hub of pearl trading since the Qutb Shahi dynasty. Artisans drill, sort, and string pearls entirely by hand.",
     buyLink: "https://www.gitagged.com/online-store/jewelry-stores/",
     emoji: "📿",
-    image: "hyderabad-pearls"
   },
 
   // ===== MAHARASHTRA =====
   {
     id: "paithani-saree",
     name: "Paithani Silk Saree",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "पैठणी साड़ी",
     category: "handloom",
     region: "Paithan, Maharashtra",
@@ -325,11 +326,11 @@ export const giProducts = [
     artisanStory: "Mentioned in ancient texts dating to 200 BC, Paithani sarees were traded on the Silk Route. The weaving technique predates most Indian textile traditions.",
     buyLink: "https://www.gitagged.com/online-store/handloom/",
     emoji: "✨",
-    image: "paithani"
   },
   {
     id: "kolhapuri-chappal",
     name: "Kolhapuri Chappal (Leather Sandals)",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "कोल्हापुरी चप्पल",
     category: "handicraft",
     region: "Kolhapur, Maharashtra",
@@ -341,13 +342,13 @@ export const giProducts = [
     artisanStory: "Dating back 800 years, these sandals were originally made by Cobbler communities in Kolhapur. Each pair is entirely handcrafted.",
     buyLink: "https://www.gitagged.com/online-store/fashion-accessories/",
     emoji: "👡",
-    image: "kolhapuri"
   },
 
   // ===== PUNJAB =====
   {
     id: "phulkari-embroidery",
     name: "Punjab Phulkari Embroidery",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "पंजाब फुलकारी",
     category: "handloom",
     region: "Punjab",
@@ -359,13 +360,13 @@ export const giProducts = [
     artisanStory: "Phulkari was traditionally made by women as a bridal gift. Each piece takes weeks of hand-stitching using darning stitch from the wrong side of the fabric.",
     buyLink: "https://www.gitagged.com/online-store/handloom/",
     emoji: "🌸",
-    image: "phulkari"
   },
 
   // ===== ANDHRA PRADESH =====
   {
     id: "kalamkari-art",
     name: "Machilipatnam Kalamkari",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "कलमकारी",
     category: "painting",
     region: "Machilipatnam, Andhra Pradesh",
@@ -377,13 +378,13 @@ export const giProducts = [
     artisanStory: "A 3,000-year-old art form patronized by the Golconda Sultanate and later by European traders. Uses 23 steps to produce natural colors.",
     buyLink: "https://www.gitagged.com/online-store/indian-paintings-traditional/",
     emoji: "🖌️",
-    image: "kalamkari"
   },
 
   // ===== KERALA =====
   {
     id: "kasavu-mundu",
     name: "Kerala Kasavu Mundu & Saree",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "केरल कसावु",
     category: "handloom",
     region: "Balaramapuram, Kerala",
@@ -395,13 +396,13 @@ export const giProducts = [
     artisanStory: "The weavers of Balaramapuram have been weaving Kerala's signature fabric for over 200 years using fine cotton and real gold thread.",
     buyLink: "https://www.gitagged.com/online-store/handloom/",
     emoji: "🌿",
-    image: "kasavu"
   },
 
   // ===== KASHMIR =====
   {
     id: "kashmir-pashmina",
     name: "Kashmir Pashmina Shawl",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "कश्मीरी पश्मीना",
     category: "handloom",
     region: "Srinagar, Kashmir",
@@ -413,11 +414,11 @@ export const giProducts = [
     artisanStory: "The art of Pashmina weaving was introduced by Mir Syed Ali Hamdani in the 14th century. A single shawl can take 2-3 years to complete with full Kani work.",
     buyLink: "https://www.gitagged.com/online-store/handloom/",
     emoji: "🧣",
-    image: "pashmina"
   },
   {
     id: "kashmir-walnut-wood",
     name: "Kashmir Walnut Wood Carving",
+    image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&q=80&w=800",
     nameHindi: "कश्मीरी अखरोट की लकड़ी",
     category: "handicraft",
     region: "Srinagar, Kashmir",
@@ -429,7 +430,6 @@ export const giProducts = [
     artisanStory: "Dating back to the 15th century, Kashmiri wood carving was influenced by Persian and Central Asian artisans who settled in the valley.",
     buyLink: "https://www.gitagged.com/online-store/handicraft/",
     emoji: "🪵",
-    image: "walnut-carving"
   }
 ];
 
