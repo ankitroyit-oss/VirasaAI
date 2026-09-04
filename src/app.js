@@ -55,6 +55,19 @@ class VirasaApp {
         links.classList.remove('open');
       });
     });
+
+    // Language Selector translation logic
+    const langSelect = document.querySelector('.lang-select');
+    if (langSelect) {
+      langSelect.addEventListener('change', (e) => {
+        const lang = e.target.value;
+        const translateSelect = document.querySelector('.goog-te-combo');
+        if (translateSelect) {
+          translateSelect.value = lang;
+          translateSelect.dispatchEvent(new Event('change'));
+        }
+      });
+    }
   }
 
   // ==================== SCROLL SPY ====================
