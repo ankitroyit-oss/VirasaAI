@@ -359,20 +359,29 @@ input { font-family: inherit; }
 }
 
 .hero-title {
-  font-size: clamp(3rem, 10vw, var(--text-7xl));
-  font-weight: 900;
-  letter-spacing: -2px;
+  font-family: var(--font-logo);
+  font-size: clamp(3.5rem, 10vw, var(--text-7xl));
+  font-weight: normal;
+  letter-spacing: 2px;
   line-height: 1.1;
   margin-bottom: var(--space-4);
   opacity: 0;
   animation: fadeInUp 0.8s 0.4s forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-title-accent {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 8vw, var(--text-6xl));
   background: var(--gradient-heritage);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  margin-left: 12px;
+  letter-spacing: -2px;
 }
 
 .hero-tagline {
