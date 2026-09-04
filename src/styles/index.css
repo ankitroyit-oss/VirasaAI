@@ -169,9 +169,15 @@ input { font-family: inherit; }
 }
 
 /* Hide Google Translate UI */
-iframe.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
-.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
-body { top: 0px !important; }
+iframe.goog-te-banner-frame,
+.goog-te-banner-frame,
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+}
+body { top: 0px !important; position: relative !important; }
 #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
 .goog-text-highlight { background: none !important; box-shadow: none !important; }
 .goog-te-gadget { display: none !important; }
