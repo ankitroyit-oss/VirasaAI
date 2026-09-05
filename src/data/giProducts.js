@@ -1,5 +1,5 @@
 /* =============================================
-   VirasaAI — GI-Tagged Products Database
+   VirasatAI — GI-Tagged Products Database
    Curated handicrafts & artisan products by region
    ============================================= */
 

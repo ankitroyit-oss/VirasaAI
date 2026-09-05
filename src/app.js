@@ -1,5 +1,5 @@
 /* =============================================
-   VirasaAI — Main Application Controller
+   VirasatAI — Main Application Controller
    Handles routing, modules, and interactivity
    ============================================= */
 
@@ -10,7 +10,7 @@ import { timelineEras } from './data/timeline.js';
 import { giProducts, getProductsByState, getProductsBySite, getProductsByCategory } from './data/giProducts.js';
 
 // ==================== APP INITIALIZATION ====================
-class VirasaApp {
+class VirasatApp {
   constructor() {
     this.cameraStream = null;
     this.quizState = null;
@@ -1014,5 +1014,5 @@ class VirasaApp {
 
 // ==================== LAUNCH ====================
 document.addEventListener('DOMContentLoaded', () => {
-  new VirasaApp();
+  new VirasatApp();
 });

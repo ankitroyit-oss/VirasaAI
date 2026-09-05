@@ -1,5 +1,5 @@
 /* =============================================
-   VirasaAI — Quiz Questions Database
+   VirasatAI — Quiz Questions Database
    50+ questions across 5 categories
    ============================================= */
 

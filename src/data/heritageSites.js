@@ -1,5 +1,5 @@
 /* =============================================
-   VirasaAI — Heritage Sites Database
+   VirasatAI — Heritage Sites Database
    20 curated sites with full cultural data
    ============================================= */
 

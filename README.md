@@ -1,4 +1,4 @@
-# VirasaAI — AI-Powered Indian Heritage Discovery 🇮🇳
+# VirasatAI — AI-Powered Indian Heritage Discovery 🇮🇳
 
 > **"Point. Discover. Experience India."**
 

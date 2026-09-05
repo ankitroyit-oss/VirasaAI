@@ -1,5 +1,5 @@
 /* =============================================
-   VirasaAI — Indian States Cultural Data
+   VirasatAI — Indian States Cultural Data
    ============================================= */
 
 export const indianStates = [

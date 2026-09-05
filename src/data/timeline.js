@@ -1,5 +1,5 @@
 /* =============================================
-   VirasaAI — Cultural Timeline Data
+   VirasatAI — Cultural Timeline Data
    Major eras of Indian civilization
    ============================================= */
 
